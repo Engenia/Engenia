@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+<TITLE>Setting Sag</TITLE>
+</HEAD>
+<BODY BGCOLOR=FFFFFF TEXT=000000 LINK=0000FF VLINK=800080>
+
+<P><center><STRONG>Setting Sag</STRONG>
+(02 Dec 2007)<br>
+source: www.racetech.com article by Paul Thede</center></p>
+
+<p>The first step to setting up any bike is to set the spring sag and determine if you have the correct-rate
+ springs. Spring sag is the amount the springs compress between fully topped out and fully loaded with the
+ rider on board in riding position. It is also referred to as static ride height or static sag.</p>
+
+<p>If you've ever measured sag before, you may have noticed that if you check it three or four times,
+ you can get three or four different numbers without changing anything. We'll tell  you why this occurs
+ and how to handle it.</p>
+
+<p><center><font size="+2">Rear End</font></center></p>
+<p><b>1:</b> Extend the suspension completely by getting the wheel off the ground. It helps to have a few
+ friends around. On bikes with sidestands the bike can usually be carefully rocked up on the stand to
+ unload the suspension. Most race stands will not work because the suspension will still be loaded by
+ resting on the swingarm rather than the wheel. Measure the distance from the axle vertically to some
+ point on the chassis (metric figures are easiest and more precise). Mark this reference point
+ because you'll need to refer to it again. This measurement is L1. If the measurement is not exactly
+ vertical the sag numbers will be inaccurate (too low)</p>
+<p><b>2:</b> Take the bike off the stand and put the rider on board in riding position. Have a third
+ person balance the bike from the front. If accuracy is important to you, you must take the friction of
+ the linkage into account. This is where our procedure is different: We take two additional measurements.
+ First, push down on the rear end about 25mm (1") and let it extend very slowly.<br>
+Where it stops, measure the distance between the axle and the mark on chassis again. If there were no
+ drag in the linkage the bike would come up a little further. It's important that you do not bounce!
+ This measurement is L2.</p>
+<p><b>3:</b> Have your assistant lift up on the rear of the bike about 25mm and let it down very slowly.
+ Where it stops, measure it. If there were no drag it would drop a little further. Remember, don't bounce!
+ This measurement it L3.</p>
+<p><b>4:</b> The spring sag is in the middle of these two measurements. In fact, if there were no drag in
+ the linkage, L2 and L3 would be the same. To get the actual sag figure you find the midpoint by averaging
+ the two numbers and subtracting them from the fully extended measurement L1:<br>
+<center>Static Spring Sag = L1 - [(L2 + L3) / 2]</center></p>
+
+<p><b>5:</b> Adjust the preload with whatever method applies to your bike. Spring collars are common, and
+ some benefit from the use of special tools. In a pinch you can use a blunt chisel to unlock the collars
+ and turn the main adjusting collar. If you have too much sag you need more preload; if you have too
+ little sag you need less preload. For road race bikes, rear sag is typically 25 to 30mm. Street riders
+ usually use 30 to 35mm. Bikes set up for the track are compromise when ridden on the street. The firmer
+ settings commonly used on the track are generally not recommended (or desirable) for road work.</p>
+
+<p><center><font size="+2">Front End</font></center></p>
+
+<p>Measuring front-end sag is very similar to the rear. However, it's much more critical to take seal drag
+ into account on the front end, because it is more pronounced.</p>
+<p><b>1:</b> Extend the fork completely and measure from the wiper (the dust seal atop the slider) to the
+ bottom of the triple clamp (or lower fork casting on inverted forks). This measurement is L1.</p>
+<p><b>2:</b>Take the bike off the sidestand, and put the rider on board in riding position. Get an
+ assistant to balance the bike from the rear, then push down on the front end and let it extend very
+ slowly. Where it stops, measure the distance between the wiper and the bottom of the triple clamp again.
+ Do not bounce. This measurement is L2.</p>
+<p><b>3:</b>Lift up on the front end and let it drop very slowly. Where it stops, measure again. Don't
+ bounce. This measurement is L3. Once again, L2 and L3 are different due to stiction or drag in the seals
+ and bushings, which is particularly high for telescopic front ends.</p>
+<p><b>4:</b>Just as with the front, halfway between L2 and L3 is where the sag would be with no drag or
+ stiction. Therefore L2 and L3 must be averaged and subtracted from L1 to calculate true spring sag:<br>
+ <center>Static Spring Sag = L1 - [(L2 + L3) / 2].</center></p>
+<p><b>5:</b>To adjust sag use the preload adjusters, if available, or vary the length of the preload
+ spaces inside the fork.</p>
+
+<p>Street bikes run between 25 and 33 percent of their total travel, which equates to 30 to 35mm. Roadrace
+ bikes usually run between 25 and 30mm.</p>
+
+<p>This method of checking sag and taking stiction into account also allows you to check the drag of the
+ linkage and seals. It follows that the greater the difference between the measurements (pushing down and
+ pulling up), the worse the stiction. A good linkage (rear sag) has less than 3mm (0.12") difference, and
+ a bad one has more than 10mm (0.39"). Good forks have less than 15mm difference, and we've seen forks
+ with more than 50mm. (Gee, I wonder why they're harsh?)</p>
+
+<p>It's important to stress that there is no magic number. If you like the feel of the bike with less or
+ more sag than these guidelines, great. Your personal sag and front-to-rear sag bias will depend on
+ chassis geometry, track or road conditions, tire selection and rider weight and riding preference.</p>
+
+<p>Using different sag front and rear will have huge effect on steering characteristics. More sag on the
+ front or less sag on the rear will make the bike turn more slowly. Increasing sag will also decrease
+ bottoming resistance, though spring rate has a bigger effect than sag. Racers often use less sag to keep
+ the bike clearance, and since roadraces work greater than we see on the street, they require a stiffer
+ setup. Of course, setting spring sag is only the first step of dialing in your suspension, so stay tuned
+ for future articles on spring rates and damping.</p>
+<p>-Paul Thede</p>
+
+</BODY>
+</HTML>
