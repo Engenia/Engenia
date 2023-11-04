@@ -1,0 +1,1392 @@
+<html>
+<head>
+ <title>Engenia's Benelli Tornado Novocentro Tre</title>
+ <meta name="description" content="How to keep a Benelli Tornado 900 running reliably, issues that MUST be addressed, and others you may encounter.">
+ <META name="keywords" content="Benelli Tornado Novocentro Tre maintenance issues alternator drive shaft tips recalls manual tools alternative parts mirrors camchain clutch coils ignition ECU AFR Tuner lights hot start fault frame knock gearshift battery">
+ <link rel="shortcut icon" href="EngeniaIcon.ico">
+  <!-- these two are not necessary, they are for the layout of this page itself; not transmenus. -->
+  <!-- styles.css -->
+  <style rel="stylesheet" type="text/css">
+/* wrap controls the border width of the main menu - you may need to change  this */
+#wrap {
+    border:1px solid black;
+/*    width:662px; */
+/*    width:802x; */
+/*    width:1026x;*/
+    width:1600x;
+    }
+
+/* menu will limit the width of the main menu - you may need to change  this */
+#menu {
+    background:#D6E6FF;
+    border-bottom:1px solid white;
+    padding:4px 0;
+/*    width:660px; */
+/*    width:800px; */
+/*    width:1024px;*/
+    width:1598px;
+    }
+
+/*menu a controls the characteristics of the main menu font. "padding" is before & after text */
+#menu a {
+    padding:4px 8px;
+    text-decoration:none;
+    font-weight:bold;
+    color:blue;
+    }
+
+#menu a.hover {
+    background:#F4F9FF;
+    }
+
+#menu span {
+    display:none;
+    }
+
+#img {
+    vertical-align:bottom;
+    }
+
+#subnav {
+    font-size:10px;
+    margin-bottom:2em;
+    }
+
+/* don't know what subnav a */
+#subnav a {
+    color:#FB3B00;
+    margin-right:1em;
+    }
+
+/* don't know what subnav span is for */
+#subnav span {
+    color:silver;
+    margin-right:1em;
+    }
+  
+  </style>
+
+  <!-- these two are required for transmenus to function -->
+  <!-- transmenu.css -->
+  <style rel="stylesheet" type="text/css">
+/* this is the clipping region for the menu. it's width and height get set by script, depending on the size of the items table */
+.transMenu {
+  position:absolute;
+  overflow:hidden;
+  left:-1000px;
+  top:-1000px;
+  }
+
+/* this is the main container for the menu itself. it's width and height get set by script, depending on the size of the items table */
+.transMenu .content {
+  position:absolute;
+  }
+
+/* this table comprises all menu items. each TR is one item. It is relatively positioned so that the shadow and background transparent divs can be positioned underneath it */
+.transMenu .items {
+  position:relative;
+  left:0px; top:0px;
+  z-index:2;
+  }
+
+.transMenu.top .items {
+  border-top:none;
+  }
+
+/* each TR.item is one menu item */
+.transMenu .item {
+    color:#336;
+    font-size:10px;
+    font-family:sans-serif;
+    text-decoration:none;
+  /* this is a hack for mac/ie5, whom incorrectly cascades the border properties of the parent table to each row */
+  border:none;
+  cursor:pointer;
+  cursor:hand;
+  }
+
+/* this DIV is the semi-transparent white background of each menu. the -moz-opacity is a proprietary way to get transparency in mozilla, the filter is for IE/windows 5.0+. */
+/* we set the background color in script because ie mac does not use it; that browser only uses a semi-transparent white PNG that the spacer gif inside this DIV is replaced by */
+.transMenu .background {
+  position:absolute;
+  left:0px; top:0px;
+  z-index:1;
+  -moz-opacity:.9;
+  filter:alpha(opacity=80);
+  }
+
+/* same concept as .background, but this is the sliver of shadow on the right of the menu. It's left, height, and background are set by script. In IE5/mac, it uses a PNG */
+.transMenu .shadowRight {
+  position:absolute;
+  z-index:3;
+  top:3px; width:2px;
+  -moz-opacity:.4;
+  filter:alpha(opacity=40);
+  }
+
+/* same concept as .background, but this is the sliver of shadow on the bottom of the menu. It's top, width, and background are set by script. In IE5/mac, it uses a PNG */
+.transMenu .shadowBottom {
+  position:absolute;
+  z-index:1;
+  left:3px; height:2px;
+  -moz-opacity:.4;
+  filter:alpha(opacity=40);
+  }
+
+/* this is the class that is used when the mouse is over an item. script sets the row to this class when required. */
+.transMenu .item.hover {
+  background:#fdfdfd;
+  color:black;
+  }
+
+/* this is either the dingbat that indicates there is a submenu, or a spacer gif in it's place. We give it extra margin to create some space between the text and the dingbat */
+.transMenu .item img {
+  margin-left:10px;
+  }  
+  
+  </style>
+  <script language="javascript">
+/* =================================================================================================
+ * TransMenu 
+ * March, 2003
+ *
+ * Customizable multi-level animated DHTML menus with transparency.
+ *
+ * Copyright 2003-2004, Aaron Boodman (www.youngpup.net)
+ * =================================================================================================
+ * "Can I use this?"
+ * 
+ * Use of this library is governed by the Creative Commons Attribution 2.0 License. You can check it 
+ * out at: http://creativecommons.org/licenses/by/2.0/
+ *
+ * Basically: You may copy, distribute, and eat this code as you wish. But you must give me credit 
+ * for writing it. You may not misrepresent yourself as the author of this code.
+ * =================================================================================================
+ * updates:
+ * 04.19.04 fixed cascade problem with menus nested greater than two levels.
+ * 12.23.03 added hideCurrent for menu actuators with no menus. renamed to TransMenu.
+ * 04.18.03  fixed render bug in IE 5.0 Mac by removing that browser from compatibility table ;)
+ *      also made gecko check a little more strict by specifying build no.
+ * ============================================================================================== */
+
+
+
+//==================================================================================================
+// Configuration properties
+//==================================================================================================
+TransMenu.spacerGif = "img/x.gif";                     // path to a transparent spacer gif
+TransMenu.dingbatOn = "img/submenu-on.gif";            // path to the active sub menu dingbat
+TransMenu.dingbatOff = "img/submenu-off.gif";          // path to the inactive sub menu dingbat
+TransMenu.dingbatSize = 14;                            // size of the dingbat (square shape assumed)
+TransMenu.menuPadding = 5;                             // padding between menu border and items grid
+TransMenu.itemPadding = 3;                             // additional padding around each item
+TransMenu.shadowSize = 2;                              // size of shadow under menu
+TransMenu.shadowOffset = 3;                            // distance shadow should be offset from leading edge
+TransMenu.shadowColor = "#888";                        // color of shadow (transparency is set in CSS)
+//TransMenu.shadowPng = "img/grey-40.png";               // a PNG graphic to serve as the shadow for mac IE5
+TransMenu.backgroundColor = "white";                   // color of the background (transparency set in CSS)
+//TransMenu.backgroundPng = "img/white-90.png";          // a PNG graphic to server as the background for mac IE5
+TransMenu.hideDelay = 800;                            // number of milliseconds to wait before hiding a menu
+TransMenu.slideTime = 400;                             // number of milliseconds it takes to open and close a menu
+
+
+//==================================================================================================
+// Internal use properties
+//==================================================================================================
+TransMenu.reference = {topLeft:1,topRight:2,bottomLeft:3,bottomRight:4};
+TransMenu.direction = {down:1,right:2};
+TransMenu.registry = [];
+TransMenu._maxZ = 100;
+
+
+
+//==================================================================================================
+// Static methods
+//==================================================================================================
+// supporting win ie5+, mac ie5.1+ and gecko >= mozilla 1.0
+TransMenu.isSupported = function() {
+        var ua = navigator.userAgent.toLowerCase();
+    var pf = navigator.platform.toLowerCase();
+        var an = navigator.appName;
+        var r = false;
+
+        if (ua.indexOf("gecko") > -1 && navigator.productSub >= 20020605) r = true; // gecko >= moz 1.0
+        else if (an == "Microsoft Internet Explorer") {
+                if (document.getElementById) { // ie5.1+ mac,win
+                        if (pf.indexOf("mac") == 0) {
+              r = /msie (\d(.\d*)?)/.test(ua) && Number(RegExp.$1) >= 5.1;
+            }
+            else r = true;
+                }
+        }
+
+        return r;
+}
+
+// call this in onload once menus have been created
+TransMenu.initialize = function() {
+        for (var i = 0, menu = null; menu = this.registry[i]; i++) {
+                menu.initialize();
+        }
+}
+
+// call this in document body to write out menu html
+TransMenu.renderAll = function() {
+        var aMenuHtml = [];
+        for (var i = 0, menu = null; menu = this.registry[i]; i++) {
+                aMenuHtml[i] = menu.toString();
+        }
+        document.write(aMenuHtml.join(""));
+}
+
+//==================================================================================================
+// TransMenu constructor (only called internally)
+//==================================================================================================
+// oActuator            : The thing that causes the menu to be shown when it is mousedover. Either a
+//                        reference to an HTML element, or a TransMenuItem from an existing menu.
+// iDirection           : The direction to slide out. One of TransMenu.direction.
+// iLeft                : Left pixel offset of menu from actuator
+// iTop                 : Top pixel offset of menu from actuator
+// iReferencePoint      : Corner of actuator to measure from. One of TransMenu.referencePoint.
+// parentMenuSet        : Menuset this menu will be added to.
+//==================================================================================================
+function TransMenu(oActuator, iDirection, iLeft, iTop, iReferencePoint, parentMenuSet) {
+        // public methods
+        this.addItem = addItem;
+        this.addMenu = addMenu;
+        this.toString = toString;
+        this.initialize = initialize;
+        this.isOpen = false;
+        this.show = show;
+        this.hide = hide;
+        this.items = [];
+
+        // events
+        this.onactivate = new Function();       // when the menu starts to slide open
+        this.ondeactivate = new Function();     // when the menu finishes sliding closed
+        this.onmouseover = new Function();      // when the menu has been moused over
+        this.onqueue = new Function();          // hack .. when the menu sets a timer to be closed a little while in the future
+    this.ondequeue = new Function();
+
+        // initialization
+        this.index = TransMenu.registry.length;
+        TransMenu.registry[this.index] = this;
+
+        var id = "TransMenu" + this.index;
+        var contentHeight = null;
+        var contentWidth = null;
+        var childMenuSet = null;
+        var animating = false;
+        var childMenus = [];
+        var slideAccel = -1;
+        var elmCache = null;
+        var ready = false;
+        var _this = this;
+        var a = null;
+
+        var pos = iDirection == TransMenu.direction.down ? "top" : "left";
+        var dim = null;
+
+        // private and public method implimentations
+        function addItem(sText, sUrl) {
+                var item = new TransMenuItem(sText, sUrl, this);
+                item._index = this.items.length;
+                this.items[item._index] = item;
+        }
+
+        function addMenu(oMenuItem) {
+                if (!oMenuItem.parentMenu == this) throw new Error("Cannot add a menu here");
+
+                if (childMenuSet == null) childMenuSet = new TransMenuSet(TransMenu.direction.right, -5, 2, TransMenu.reference.topRight);
+
+                var m = childMenuSet.addMenu(oMenuItem);
+
+                childMenus[oMenuItem._index] = m;
+                m.onmouseover = child_mouseover;
+                m.ondeactivate = child_deactivate;
+                m.onqueue = child_queue;
+        m.ondequeue = child_dequeue;
+
+                return m;
+        }
+
+        function initialize() {
+                initCache();
+                initEvents();
+                initSize();
+                ready = true;
+        }
+
+        function show() {
+                //dbg_dump("show");
+                if (ready) {
+                        _this.isOpen = true;
+                        animating = true;
+                        setContainerPos();
+                        elmCache["clip"].style.visibility = "visible";
+                        elmCache["clip"].style.zIndex = TransMenu._maxZ++;
+                        //dbg_dump("maxZ: " + TransMenu._maxZ);
+                        slideStart();
+                        _this.onactivate();
+                }
+        }
+
+        function hide() {
+                if (ready) {
+                        _this.isOpen = false;
+                        animating = true;
+
+                        for (var i = 0, item = null; item = elmCache.item[i]; i++) 
+                                dehighlight(item);
+
+                        if (childMenuSet) childMenuSet.hide();
+
+                        slideStart();
+                        _this.ondeactivate();
+                }
+        }
+
+        function setContainerPos() {
+                var sub = oActuator.constructor == TransMenuItem; 
+                var act = sub ? oActuator.parentMenu.elmCache["item"][oActuator._index] : oActuator; 
+                var el = act;
+                
+                var x = 0;
+                var y = 0;
+
+                
+                var minX = 0;
+                var maxX = (window.innerWidth ? window.innerWidth : document.body.clientWidth) - parseInt(elmCache["clip"].style.width);
+                var minY = 0;
+                var maxY = (window.innerHeight ? window.innerHeight : document.body.clientHeight) - parseInt(elmCache["clip"].style.height);
+
+                // add up all offsets... subtract any scroll offset
+                while (sub ? el.parentNode.className.indexOf("transMenu") == -1 : el.offsetParent) {
+                        x += el.offsetLeft;
+                        y += el.offsetTop;
+
+                        if (el.scrollLeft) x -= el.scrollLeft;
+                        if (el.scrollTop) y -= el.scrollTop;
+                        
+                        el = el.offsetParent;
+                }
+
+                if (oActuator.constructor == TransMenuItem) {
+                        x += parseInt(el.parentNode.style.left);
+                        y += parseInt(el.parentNode.style.top);
+                }
+
+                switch (iReferencePoint) {
+                        case TransMenu.reference.topLeft:
+                                break;
+                        case TransMenu.reference.topRight:
+                                x += act.offsetWidth;
+                                break;
+                        case TransMenu.reference.bottomLeft:
+                                y += act.offsetHeight;
+                                break;
+                        case TransMenu.reference.bottomRight:
+                                x += act.offsetWidth;
+                                y += act.offsetHeight;
+                                break;
+                }
+
+                x += iLeft;
+                y += iTop;
+
+                x = Math.max(Math.min(x, maxX), minX);
+                y = Math.max(Math.min(y, maxY), minY);
+
+                elmCache["clip"].style.left = x + "px";
+                elmCache["clip"].style.top = y + "px";
+        }
+
+        function slideStart() {
+                var x0 = parseInt(elmCache["content"].style[pos]);
+                var x1 = _this.isOpen ? 0 : -dim;
+
+                if (a != null) a.stop();
+                a = new Accelimation(x0, x1, TransMenu.slideTime, slideAccel);
+
+                a.onframe = slideFrame;
+                a.onend = slideEnd;
+
+                a.start();
+        }
+
+        function slideFrame(x) {
+                elmCache["content"].style[pos] = x + "px";
+        }
+
+        function slideEnd() {
+                if (!_this.isOpen) elmCache["clip"].style.visibility = "hidden";
+                animating = false;
+        }
+
+        function initSize() {
+                // everything is based off the size of the items table...
+                var ow = elmCache["items"].offsetWidth;
+                var oh = elmCache["items"].offsetHeight;
+                var ua = navigator.userAgent.toLowerCase();
+
+                // clipping container should be ow/oh + the size of the shadow
+                elmCache["clip"].style.width = ow + TransMenu.shadowSize +  2 + "px";
+                elmCache["clip"].style.height = oh + TransMenu.shadowSize + 2 + "px";
+
+                // same with content...
+                elmCache["content"].style.width = ow + TransMenu.shadowSize + "px";
+                elmCache["content"].style.height = oh + TransMenu.shadowSize + "px";
+
+                contentHeight = oh + TransMenu.shadowSize;
+                contentWidth = ow + TransMenu.shadowSize;
+                
+                dim = iDirection == TransMenu.direction.down ? contentHeight : contentWidth;
+
+                // set initially closed
+                elmCache["content"].style[pos] = -dim - TransMenu.shadowSize + "px";
+                elmCache["clip"].style.visibility = "hidden";
+
+                // if *not* mac/ie 5
+                if (ua.indexOf("mac") == -1 || ua.indexOf("gecko") > -1) {
+                        // set background div to offset size
+                        elmCache["background"].style.width = ow + "px";
+                        elmCache["background"].style.height = oh + "px";
+                        elmCache["background"].style.backgroundColor = TransMenu.backgroundColor;
+
+                        // shadow left starts at offset left and is offsetHeight pixels high
+                        elmCache["shadowRight"].style.left = ow + "px";
+                        elmCache["shadowRight"].style.height = oh - (TransMenu.shadowOffset - TransMenu.shadowSize) + "px";
+                        elmCache["shadowRight"].style.backgroundColor = TransMenu.shadowColor;
+
+                        // shadow bottom starts at offset height and is offsetWidth - shadowOffset 
+                        // pixels wide (we don't want the bottom and right shadows to overlap or we 
+                        // get an extra bright bottom-right corner)
+                        elmCache["shadowBottom"].style.top = oh + "px";
+                        elmCache["shadowBottom"].style.width = ow - TransMenu.shadowOffset + "px";
+                        elmCache["shadowBottom"].style.backgroundColor = TransMenu.shadowColor;
+                }
+                // mac ie is a little different because we use a PNG for the transparency
+                else {
+                        // set background div to offset size
+                        elmCache["background"].firstChild.src = TransMenu.backgroundPng;
+                        elmCache["background"].firstChild.width = ow;
+                        elmCache["background"].firstChild.height = oh;
+
+                        // shadow left starts at offset left and is offsetHeight pixels high
+                        elmCache["shadowRight"].firstChild.src = TransMenu.shadowPng;
+                        elmCache["shadowRight"].style.left = ow + "px";
+                        elmCache["shadowRight"].firstChild.width = TransMenu.shadowSize;
+                        elmCache["shadowRight"].firstChild.height = oh - (TransMenu.shadowOffset - TransMenu.shadowSize);
+
+                        // shadow bottom starts at offset height and is offsetWidth - shadowOffset 
+                        // pixels wide (we don't want the bottom and right shadows to overlap or we 
+                        // get an extra bright bottom-right corner)
+                        elmCache["shadowBottom"].firstChild.src = TransMenu.shadowPng;
+                        elmCache["shadowBottom"].style.top = oh + "px";
+                        elmCache["shadowBottom"].firstChild.height = TransMenu.shadowSize;
+                        elmCache["shadowBottom"].firstChild.width = ow - TransMenu.shadowOffset;
+                }
+        }
+        
+        function initCache() {
+                var menu = document.getElementById(id);
+                var all = menu.all ? menu.all : menu.getElementsByTagName("*"); // IE/win doesn't support * syntax, but does have the document.all thing
+
+                elmCache = {};
+                elmCache["clip"] = menu;
+                elmCache["item"] = [];
+                
+                for (var i = 0, elm = null; elm = all[i]; i++) {
+                        switch (elm.className) {
+                                case "items":
+                                case "content":
+                                case "background":
+                                case "shadowRight":
+                                case "shadowBottom":
+                                        elmCache[elm.className] = elm;
+                                        break;
+                                case "item":
+                                        elm._index = elmCache["item"].length;
+                                        elmCache["item"][elm._index] = elm;
+                                        break;
+                        }
+                }
+
+                // hack!
+                _this.elmCache = elmCache;
+        }
+
+        function initEvents() {
+                // hook item mouseover
+                for (var i = 0, item = null; item = elmCache.item[i]; i++) {
+                        item.onmouseover = item_mouseover;
+                        item.onmouseout = item_mouseout;
+                        item.onclick = item_click;
+                }
+
+                // hook actuation
+                if (typeof oActuator.tagName != "undefined") {
+                        oActuator.onmouseover = actuator_mouseover;
+                        oActuator.onmouseout = actuator_mouseout;
+                }
+
+                // hook menu mouseover
+                elmCache["content"].onmouseover = content_mouseover;
+                elmCache["content"].onmouseout = content_mouseout;
+        }
+
+        function highlight(oRow) {
+                oRow.className = "item hover";
+                if (childMenus[oRow._index]) 
+                        oRow.lastChild.firstChild.src = TransMenu.dingbatOn;
+        }
+
+        function dehighlight(oRow) {
+                oRow.className = "item";
+                if (childMenus[oRow._index]) 
+                        oRow.lastChild.firstChild.src = TransMenu.dingbatOff;
+        }
+
+        function item_mouseover() {
+                if (!animating) {
+                        highlight(this);
+
+                        if (childMenus[this._index]) 
+                                childMenuSet.showMenu(childMenus[this._index]);
+                        else if (childMenuSet) childMenuSet.hide();
+                }
+        }
+
+        function item_mouseout() {
+                if (!animating) {
+                        if (childMenus[this._index])
+                                childMenuSet.hideMenu(childMenus[this._index]);
+                        else    // otherwise child_deactivate will do this
+                                dehighlight(this);
+                }
+        }
+
+        function item_click() {
+                if (!animating) {
+                        if (_this.items[this._index].url) 
+                                location.href = _this.items[this._index].url;
+                }
+        }
+
+        function actuator_mouseover() {
+                parentMenuSet.showMenu(_this);
+        }
+
+        function actuator_mouseout() {
+                parentMenuSet.hideMenu(_this);
+        }
+
+        function content_mouseover() {
+                if (!animating) {
+                        parentMenuSet.showMenu(_this);
+                        _this.onmouseover();
+                }
+        }
+
+        function content_mouseout() {
+                if (!animating) {
+                        parentMenuSet.hideMenu(_this);
+                }
+        }
+
+        function child_mouseover() {
+                if (!animating) {
+                        parentMenuSet.showMenu(_this);
+                }
+        }
+
+        function child_deactivate() {
+                for (var i = 0; i < childMenus.length; i++) {
+                        if (childMenus[i] == this) {
+                                dehighlight(elmCache["item"][i]);
+                                break;
+                        }
+                }
+        }
+
+        function child_queue() {
+                parentMenuSet.hideMenu(_this);
+        }
+
+    function child_dequeue() {
+        parentMenuSet.showMenu(_this);
+    }
+
+        function toString() {
+                var aHtml = [];
+                var sClassName = "transMenu" + (oActuator.constructor != TransMenuItem ? " top" : "");
+
+                for (var i = 0, item = null; item = this.items[i]; i++) {
+                        aHtml[i] = item.toString(childMenus[i]);
+                }
+
+                return '<div id="' + id + '" class="' + sClassName + '">' + 
+                        '<div class="content"><table class="items" cellpadding="0" cellspacing="0" border="0">' + 
+                        '<tr><td colspan="2"><img src="' + TransMenu.spacerGif + '" width="1" height="' + TransMenu.menuPadding + '"></td></tr>' + 
+                        aHtml.join('') + 
+                        '<tr><td colspan="2"><img src="' + TransMenu.spacerGif + '" width="1" height="' + TransMenu.menuPadding + '"></td></tr></table>' + 
+                        '<div class="shadowBottom"><img src="' + TransMenu.spacerGif + '" width="1" height="1"></div>' + 
+                        '<div class="shadowRight"><img src="' + TransMenu.spacerGif + '" width="1" height="1"></div>' + 
+            '<div class="background"><img src="' + TransMenu.spacerGif + '" width="1" height="1"></div>' + 
+                  '</div></div>';
+        }
+}
+
+
+//==================================================================================================
+// TransMenuSet
+//==================================================================================================
+// iDirection           : The direction to slide out. One of TransMenu.direction.
+// iLeft                : Left pixel offset of menus from actuator
+// iTop                 : Top pixel offset of menus from actuator
+// iReferencePoint      : Corner of actuator to measure from. One of TransMenu.referencePoint.
+//==================================================================================================
+TransMenuSet.registry = [];
+
+function TransMenuSet(iDirection, iLeft, iTop, iReferencePoint) {
+        // public methods
+        this.addMenu = addMenu;
+        this.showMenu = showMenu;
+        this.hideMenu = hideMenu;
+        this.hide = hide;
+        this.hideCurrent = hideCurrent;
+
+        // initialization
+        var menus = [];
+        var _this = this;
+        var current = null;
+
+        this.index = TransMenuSet.registry.length;
+        TransMenuSet.registry[this.index] = this;
+
+        // method implimentations...
+        function addMenu(oActuator) {
+                var m = new TransMenu(oActuator, iDirection, iLeft, iTop, iReferencePoint, this);
+                menus[menus.length] = m;
+                return m;
+        }
+
+        function showMenu(oMenu) {
+                if (oMenu != current) {
+                        // close currently open menu
+                        if (current != null) hide(current);        
+
+                        // set current menu to this one
+                        current = oMenu;
+
+                        // if this menu is closed, open it
+                        oMenu.show();
+                }
+                else {
+                        // hide pending calls to close this menu
+                        cancelHide(oMenu);
+                }
+        }
+
+        function hideMenu(oMenu) {
+                //dbg_dump("hideMenu a " + oMenu.index);
+                if (current == oMenu && oMenu.isOpen) {
+                        //dbg_dump("hideMenu b " + oMenu.index);
+                        if (!oMenu.hideTimer) scheduleHide(oMenu);
+                }
+        }
+
+        function scheduleHide(oMenu) {
+                //dbg_dump("scheduleHide " + oMenu.index);
+                oMenu.onqueue();
+                oMenu.hideTimer = window.setTimeout("TransMenuSet.registry[" + _this.index + "].hide(TransMenu.registry[" + oMenu.index + "])", TransMenu.hideDelay);
+        }
+
+        function cancelHide(oMenu) {
+                //dbg_dump("cancelHide " + oMenu.index);
+                if (oMenu.hideTimer) {
+            oMenu.ondequeue();
+                        window.clearTimeout(oMenu.hideTimer);
+                        oMenu.hideTimer = null;
+                }
+        }
+
+        function hide(oMenu) {   
+                if (!oMenu && current) oMenu = current;
+
+                if (oMenu && current == oMenu && oMenu.isOpen) {
+                        hideCurrent();
+                }
+        }
+
+        function hideCurrent() {
+        if (null != current) {
+          cancelHide(current);
+          current.hideTimer = null;
+          current.hide();
+          current = null;
+        }
+        }
+}
+
+//==================================================================================================
+// TransMenuItem (internal)
+// represents an item in a dropdown
+//==================================================================================================
+// sText        : The item display text
+// sUrl         : URL to load when the item is clicked
+// oParent      : Menu this item is a part of
+//==================================================================================================
+function TransMenuItem(sText, sUrl, oParent) {
+        this.toString = toString;
+        this.text = sText;
+        this.url = sUrl;
+        this.parentMenu = oParent;
+
+        function toString(bDingbat) {
+                var sDingbat = bDingbat ? TransMenu.dingbatOff : TransMenu.spacerGif;
+                var iEdgePadding = TransMenu.itemPadding + TransMenu.menuPadding;
+                var sPaddingLeft = "padding:" + TransMenu.itemPadding + "px; padding-left:" + iEdgePadding + "px;"
+                var sPaddingRight = "padding:" + TransMenu.itemPadding + "px; padding-right:" + iEdgePadding + "px;"
+
+                return '<tr class="item"><td nowrap style="' + sPaddingLeft + '">' + 
+                        sText + '</td><td width="14" style="' + sPaddingRight + '">' + 
+                        '<img src="' + sDingbat + '" width="14" height="14"></td></tr>';
+        }
+}
+
+
+
+
+
+
+//=====================================================================
+// Accel[erated] [an]imation object
+// change a property of an object over time in an accelerated fashion
+//=====================================================================
+// obj  : reference to the object whose property you'd like to animate
+// prop : property you would like to change eg: "left"
+// to   : final value of prop
+// time : time the animation should take to run
+// zip  : optional. specify the zippiness of the acceleration. pick a 
+//      number between -1 and 1 where -1 is full decelerated, 1 is 
+//      full accelerated, and 0 is linear (no acceleration). default
+//      is 0.
+// unit  : optional. specify the units for use with prop. default is 
+//      "px".
+//=====================================================================
+// bezier functions lifted from the lib_animation.js file in the 
+// 13th Parallel API. www.13thparallel.org
+//=====================================================================
+
+function Accelimation(from, to, time, zip) {
+  if (typeof zip  == "undefined") zip  = 0;
+  if (typeof unit == "undefined") unit = "px";
+
+        this.x0         = from;
+        this.x1    = to;
+  this.dt    = time;
+  this.zip  = -zip;
+  this.unit  = unit;
+  this.timer  = null;
+  this.onend  = new Function();
+        this.onframe    = new Function();
+}
+
+
+
+//=====================================================================
+// public methods
+//=====================================================================
+
+// after you create an accelimation, you call this to start it-a runnin'
+Accelimation.prototype.start = function() {
+  this.t0 = new Date().getTime();
+  this.t1 = this.t0 + this.dt;
+  var dx  = this.x1 - this.x0;
+  this.c1 = this.x0 + ((1 + this.zip) * dx / 3);
+  this.c2 = this.x0 + ((2 + this.zip) * dx / 3);
+  Accelimation._add(this);
+}
+
+// and if you need to stop it early for some reason...
+Accelimation.prototype.stop = function() {
+  Accelimation._remove(this);
+}
+
+
+
+//=====================================================================
+// private methods
+//=====================================================================
+
+// paints one frame. gets called by Accelimation._paintAll.
+Accelimation.prototype._paint = function(time) {
+  if (time < this.t1) {
+    var elapsed = time - this.t0;
+          this.onframe(Accelimation._getBezier(elapsed/this.dt,this.x0,this.x1,this.c1,this.c2));
+        }
+  else this._end();
+}
+
+// ends the animation
+Accelimation.prototype._end = function() {
+  Accelimation._remove(this);
+        this.onframe(this.x1);
+  this.onend();
+}
+
+
+
+
+//=====================================================================
+// static methods (all private)
+//=====================================================================
+
+// add a function to the list of ones to call periodically
+Accelimation._add = function(o) {
+  var index = this.instances.length;
+  this.instances[index] = o;
+  // if this is the first one, start the cooling
+  if (this.instances.length == 1) {
+    this.timerID = window.setInterval("Accelimation._paintAll()", this.targetRes);
+  }
+}
+
+// remove a function from the list
+Accelimation._remove = function(o) {
+  for (var i = 0; i < this.instances.length; i++) {
+    if (o == this.instances[i]) {
+      this.instances = this.instances.slice(0,i).concat( this.instances.slice(i+1) );
+      break;
+    }
+  }
+  // if that was the last one, stop the cooling
+  if (this.instances.length == 0) {
+    window.clearInterval(this.timerID);
+    this.timerID = null;
+  }
+}
+
+// "cooling" - call each function in the list every so often
+Accelimation._paintAll = function() {
+  var now = new Date().getTime();
+  for (var i = 0; i < this.instances.length; i++) {
+    this.instances[i]._paint(now);
+  }
+}
+
+
+// Bezier functions:
+Accelimation._B1 = function(t) { return t*t*t }
+Accelimation._B2 = function(t) { return 3*t*t*(1-t) }
+Accelimation._B3 = function(t) { return 3*t*(1-t)*(1-t) }
+Accelimation._B4 = function(t) { return (1-t)*(1-t)*(1-t) }
+
+
+//Finds the coordinates of a point at a certain stage through a bezier curve
+Accelimation._getBezier = function(percent,startPos,endPos,control1,control2) {
+  return endPos * this._B1(percent) + control2 * this._B2(percent) + control1 * this._B3(percent) + startPos * this._B4(percent);
+}
+
+
+//=====================================================================
+// static properties
+//=====================================================================
+
+Accelimation.instances = [];
+Accelimation.targetRes = 10;
+Accelimation.timerID = null;
+
+
+//=====================================================================
+// IE win memory cleanup
+//=====================================================================
+
+if (window.attachEvent) {
+  var cearElementProps = [
+    'data',
+    'onmouseover',
+    'onmouseout',
+    'onmousedown',
+    'onmouseup',
+    'ondblclick',
+    'onclick',
+    'onselectstart',
+    'oncontextmenu'
+  ];
+
+  window.attachEvent("onunload", function() {
+        var el;
+        for(var d = document.all.length;d--;){
+            el = document.all[d];
+            for(var c = cearElementProps.length;c--;){
+                el[cearElementProps[c]] = null;
+            }
+        }
+  });
+}  
+  </script>
+
+<!- HERE'S WHERE THE MENUS ARE DEFINED -> <!- HERE'S WHERE THE MENUS ARE DEFINED -> <!- HERE'S WHERE THE MENUS ARE DEFINED ->
+<!- HERE'S WHERE THE MENUS ARE DEFINED -> <!- HERE'S WHERE THE MENUS ARE DEFINED -> <!- HERE'S WHERE THE MENUS ARE DEFINED ->
+
+  <script language="javascript">
+    function init() {
+      //==========================================================================================
+      // if supported, initialize TransMenus
+      //==========================================================================================
+      // Check isSupported() so that menus aren't accidentally sent to non-supporting browsers.
+      // This is better than server-side checking because it will also catch browsers which would
+      // normally support the menus but have javascript disabled.
+      //
+      // If supported, call initialize() and then hook whatever image rollover code you need to do
+      // to the .onactivate and .ondeactivate events for each menu.
+      //==========================================================================================
+      if (TransMenu.isSupported()) {
+        TransMenu.initialize();
+
+        // hook all the highlight swapping of the main toolbar to menu activation/deactivation
+        // instead of simple rollover to get the effect where the button stays hightlit until
+        // the menu is closed.
+        menu1.onactivate = function() { document.getElementById("general").className = "hover"; };
+        menu1.ondeactivate = function() { document.getElementById("general").className = ""; };
+
+        menu2.onactivate = function() { document.getElementById("specifications").className = "hover"; };
+        menu2.ondeactivate = function() { document.getElementById("specifications").className = ""; };
+
+        menu3.onactivate = function() { document.getElementById("maintenance").className = "hover"; };
+        menu3.ondeactivate = function() { document.getElementById("maintenance").className = ""; };
+
+        menu4.onactivate = function() { document.getElementById("body").className = "hover"; };
+        menu4.ondeactivate = function() { document.getElementById("body").className = ""; };
+
+        menu5.onactivate = function() { document.getElementById("engine").className = "hover"; };
+        menu5.ondeactivate = function() { document.getElementById("engine").className = ""; };
+
+        menu6.onactivate = function() { document.getElementById("cooling").className = "hover"; };
+        menu6.ondeactivate = function() { document.getElementById("cooling").className = ""; };
+
+        menu7.onactivate = function() { document.getElementById("frame").className = "hover"; };
+        menu7.ondeactivate = function() { document.getElementById("frame").className = ""; };
+
+        menu8.onactivate = function() { document.getElementById("fuel").className = "hover"; };
+        menu8.ondeactivate = function() { document.getElementById("fuel").className = ""; };
+
+        menu9.onactivate = function() { document.getElementById("electrical").className = "hover"; };
+        menu9.ondeactivate = function() { document.getElementById("electrical").className = ""; };
+
+        menu10.onactivate = function() { document.getElementById("diagnostics").className = "hover"; };
+        menu10.ondeactivate = function() { document.getElementById("diagnostics").className = ""; };
+
+        menu11.onactivate = function() { document.getElementById("aftermarket").className = "hover"; };
+        menu11.ondeactivate = function() { document.getElementById("aftermarket").className = ""; };
+
+        menu12.onactivate = function() { document.getElementById("tr650").className = "hover"; };
+        menu12.ondeactivate = function() { document.getElementById("tr650").className = ""; };
+
+// use following if no sub-menu
+//        document.getElementById("xxxx").onmouseover = function() {
+//          ms.hideCurrent();
+//          this.className = "hover";
+//        }
+
+//        document.getElementById("xxxx").onmouseout = function() { this.className = ""; }
+      }
+    }
+  </script>
+</head>
+
+<BODY leftmargin=0 topmargin=0 marginwidth=0 marginheight=0 bgcolor="white" onload="init()">
+  <div id="banner">
+    </div>
+  <div id="content">
+    <div id="wrap">
+      <div id="menu">
+        <a id="general" href="#">General</a>
+        <a id="specifications" href="#">Specifications</a>
+        <a id="maintenance" href="#">Maintenance</a>
+        <a id="body" href="#">Body</a>
+        <a id="engine" href="#">Engine</a>
+        <a id="cooling" href="#">Cooling</a>
+        <a id="frame" href="#">Frame</a>
+        <a id="fuel" href="#">Fuel-Ignition</a>
+        <a id="electrical" href="#">Electrical</a>
+        <a id="diagnostics" href="#">Diagnostics</a>
+        <a id="aftermarket" href="#">Aftermarket</a>
+        <a id="tr650" href="#">TR650</a>
+        <a id="trek" href="#">TreK</a>
+      </div>
+    </div>
+  </div>
+
+  <script language="javascript">
+  // set up drop downs anywhere in the body of the page. I think the bottom of the page is better.. 
+  // but you can experiment with effect on loadtime.
+  if (TransMenu.isSupported()) {
+
+    //==================================================================================================
+    // create a set of dropdowns
+    //==================================================================================================
+    // the first param should always be down, as it is here
+    //
+    // The second and third param are the top and left offset positions of the menus from their actuators
+    // respectively. To make a menu appear a little to the left and bottom of an actuator, you could use
+    // something like -5, 5
+    //
+    // The last parameter can be .topLeft, .bottomLeft, .topRight, or .bottomRight to inidicate the corner
+    // of the actuator from which to measure the offset positions above. Here we are saying we want the 
+    // menu to appear directly below the bottom left corner of the actuator
+    //==================================================================================================
+    var ms = new TransMenuSet(TransMenu.direction.down, 1, 0, TransMenu.reference.bottomLeft);
+
+    //==================================================================================================
+    // create a dropdown menu
+    //==================================================================================================
+    // the first parameter should be the HTML element which will act actuator for the menu
+    //==================================================================================================
+    var menu1 = ms.addMenu(document.getElementById("general"));
+    menu1.addItem("Buying Tips", "./01_General/00_BuyingATre/Tips.html"); 
+    menu1.addItem("VIN", "./01_General/01_VIN/VIN.html"); 
+    menu1.addItem("Recalls", "./01_General/02_Recalls/RecallStatus.html");
+    menu1.addItem("Tools", "./01_General/03_Tools/ToolKit.html"); 
+    menu1.addItem("Manual", "./01_General/04_WS_Manual/WSManual.html"); 
+    menu1.addItem("Alt. Parts", "./01_General/05_AltParts/AltParts.html"); 
+    menu1.addItem("Break In", "./01_General/06_BreakIn/BreakIn.html"); 
+
+    //==================================================================================================
+
+    //==================================================================================================
+    var menu2 = ms.addMenu(document.getElementById("specifications"));
+    menu2.addItem("Economy", "./02_Specs/00_Economy/Economy.html");
+
+    //==================================================================================================
+
+    //==================================================================================================
+    var menu3 = ms.addMenu(document.getElementById("maintenance"));
+    menu3.addItem("Reset Flag", "./03_Maintenance/01_Service/ResetServiceFlag.html");
+    menu3.addItem("Spark Plugs", "./03_Maintenance/02_SparkPlugs/Plugs.html");
+    menu3.addItem("Air Box", "");
+    menu3.addItem("Levers", "");
+    menu3.addItem("Throttle Synch", "./03_Maintenance/07_ThrottleSync/ThrottleSync.html");
+    menu3.addItem("Stepper", "./03_Maintenance/08_Stepper/Stepper.html");
+    menu3.addItem("Valves", "./03_Maintenance/09_Valves/Clearances.html");
+    menu3.addItem("Oil and Filter", "");
+    menu3.addItem("Radiator", "./03_Maintenance/15_FillingCoolant/CoolantBleeding.html");
+    menu3.addItem("Exhaust", "./03_Maintenance/17_Exhaust/CanSeal.html");
+    menu3.addItem("Brake Pads", "./03_Maintenance/21_BrakePads/BrakePads.html");
+    menu3.addItem("Chain Oiling", "");
+    menu3.addItem("Tyres", "./03_Maintenance/32_Tyres/Tyres.html");
+    menu3.addItem("Battery", "");
+    menu3.addItem("Front Lights", "./03_Maintenance/37_FrontLights/FrontLamps.html");
+    menu3.addItem("Rear Lights", "./03_Maintenance/39_RearLights/RearLamps.html");
+
+
+/* sub-menu on 1st referred to as [0], 3rd as [2], etc*/
+    var submenu31 = menu3.addMenu(menu3.items[2]);
+    var submenu32 = menu3.addMenu(menu3.items[3]);
+    var submenu33 = menu3.addMenu(menu3.items[7]);
+    var submenu34 = menu3.addMenu(menu3.items[11]);
+    var submenu35 = menu3.addMenu(menu3.items[13]);
+
+    submenu31.addItem("Removal", "./03_Maintenance/03_AirBox/AirBox.html");
+    submenu31.addItem("Filter", "./03_Maintenance/03_AirBox/AirFilter.html");
+    submenu31.addItem("Drain", "./03_Maintenance/03_AirBox/Drain.html");
+
+    submenu32.addItem("Alternate", "./03_Maintenance/05_Levers/Levers.html");
+    submenu32.addItem("Gear", "./03_Maintenance/05_Levers/ReverseShift.html");
+    submenu32.addItem("Clutch Bush", "./03_Maintenance/05_Levers/ClutchLeverBush.html");
+
+    submenu33.addItem("Paper", "./03_Maintenance/12_OilAndFilter/RycoFilter.html");
+    submenu33.addItem("Steel", "./03_Maintenance/12_OilAndFilter/ScottsFilter.html");
+
+    submenu34.addItem("ProOiler", "./03_Maintenance/26_OilingChain/ProOiler/ProOiler.html");
+    submenu34.addItem("ScottOiler", "./03_Maintenance/26_OilingChain/ScottOiler/ScottOiler.html");
+
+    submenu35.addItem("Alternatives", "./09_Electrical/04_Battery/Battery.html");
+    submenu35.addItem("Cables", "./09_Electrical/04_Battery/BatteryCables.html");
+    //==================================================================================================
+
+    //==================================================================================================
+    var menu4 = ms.addMenu(document.getElementById("body"));
+    menu4.addItem("General", "");
+    menu4.addItem("Mirrors", "./04_Body/04_Mirrors/Mirrors.html");
+    menu4.addItem("Tank", "");
+    menu4.addItem("Fuel Pump", "./04_Body/14_FuelPump/FuelFilter.html");
+    menu4.addItem("Luggage Rack", "");
+    menu4.addItem("Side Stand", "./04_Body/16_SideStand/SideStand.html");
+
+    var submenu41 = menu4.addMenu(menu4.items[0]);
+    var submenu42 = menu4.addMenu(menu4.items[2]);
+    var submenu43 = menu4.addMenu(menu4.items[4]);
+
+    submenu41.addItem("Alarm", "./04_Body/01_General/Alarm.html");
+    submenu41.addItem("Paint", "./04_Body/01_General/Paint.html");
+
+    submenu42.addItem("Removal", "./04_Body/13_Tank/Tank.html");
+    submenu42.addItem("Protector", "./04_Body/13_Tank/Protector.html");
+    submenu42.addItem("Level Sensor", "./04_Body/13_Tank/LevelSensor.html");
+    
+    submenu43.addItem("Carbon Fibre", "./04_Body/15_Luggage/CFRack.html");
+    submenu43.addItem("Aluminium", "./04_Body/15_Luggage/AlRack.html");
+    
+    //==================================================================================================
+
+    //==================================================================================================
+    var menu5 = ms.addMenu(document.getElementById("engine"));
+    menu5.addItem("Parts", "./05_Engine/TornadoMotorParts.jpg");
+    menu5.addItem("Camshaft", "");
+    menu5.addItem("Head Issue", "./05_Engine/02_Head/Softy.html");
+    menu5.addItem("Valve Issue", "./05_Engine/03_Valves/CompressionLoss.html");
+    menu5.addItem("Alternator", "");
+    menu5.addItem("Clutch", "");
+    menu5.addItem("Gearbox", "");
+    menu5.addItem("Crankcase", "");
+
+    var submenu9 = menu5.addMenu(menu5.items[1]);
+    var submenu10 = menu5.addMenu(menu5.items[4]);
+    var submenu11 = menu5.addMenu(menu5.items[5]);
+    var submenu12 = menu5.addMenu(menu5.items[6]);
+    var submenu56 = menu5.addMenu(menu5.items[7]);
+
+    submenu9.addItem("Preamble", "./05_Engine/01_Camshaft/01_Remove/Preamble.html"); //camshaft
+    submenu9.addItem("Removal", "./05_Engine/01_Camshaft/01_Remove/Removal.html");
+    submenu9.addItem("Guide Fit Check", "./05_Engine/01_Camshaft/03_ChainAndGuide/FitCheck.html");
+    submenu9.addItem("Install", "./05_Engine/01_Camshaft/05_Install/Install.html");
+    submenu9.addItem("Cam Cap Studs", "./05_Engine/01_Camshaft/05_Install/CamCapStuds.html");
+    submenu9.addItem("Tensioner", "");
+    submenu9.addItem("ChainFailure", "./05_Engine/01_Camshaft/06_BustedChain/Appraisal.html");
+
+    submenu10.addItem("Noise?", "./05_Engine/06_Alternator/NoisyAlternator.html"); //alternator
+    submenu10.addItem("O-ring", "./05_Engine/06_Alternator/AlternatorORing.html");
+
+    submenu11.addItem("Actuator Arm", "./05_Engine/08_Clutch/ClutchActuatorArm.html");
+    submenu11.addItem("Cable Inner", "./05_Engine/08_Clutch/ClutchCableInner.html");
+    submenu11.addItem("Drag", "./05_Engine/08_Clutch/ClutchDrag.html"); //clutch
+    submenu11.addItem("Gear Failure", "./05_Engine/08_Clutch/ClutchGearFailure.html");
+    submenu11.addItem("Hydraulic Conversion", "./05_Engine/08_Clutch/HydraulicConversion.html");
+    submenu11.addItem("Slipper Adjustment", "./05_Engine/08_Clutch/SlipperClutch.html");
+
+
+    submenu12.addItem("Where's Neutral?", "./05_Engine/09_Gears/Neutral.html"); //gearbox
+    submenu12.addItem("False Neutral", "./05_Engine/09_Gears/FalseNeutral.html");
+    submenu12.addItem("Selection Issues", "./05_Engine/09_Gears/Selector.html");
+
+    submenu56.addItem("Alternator Drive Shaft Removal", "./05_Engine/11_Crankcase/RemoveAltDrvShaft.html");
+
+    var submenu00 = submenu9.addMenu(submenu9.items[5]);
+
+    submenu00.addItem("Operation", "./05_Engine/01_Camshaft/04_Tensioner/Tensioner.html");  //tensioner
+    submenu00.addItem("#922 Stats", "./05_Engine/01_Camshaft/04_Tensioner/TensionerStats.html");
+
+    //==================================================================================================
+
+    //==================================================================================================
+    var menu6 = ms.addMenu(document.getElementById("cooling"));
+    menu6.addItem("Core Plug", "./06_Cooling/CorePlugs.html");
+    menu6.addItem("Coolant Temp", "./06_Cooling/CoolantTemp.html");
+    menu6.addItem("Radiator Fans", "./06_Cooling/01_Radiator/RadFans.html");
+    menu6.addItem("Keep It Cooler", "./06_Cooling/KeepingItCool.html");
+    menu6.addItem("Thermostat", "./06_Cooling/03_Thermostat/AltThermostat.html");
+   
+
+
+    //==================================================================================================
+    var menu7 = ms.addMenu(document.getElementById("frame"));
+    menu7.addItem("Brakes", "");
+    menu7.addItem("Suspension", "");
+    menu7.addItem("Steering Damper", "");
+    menu7.addItem("Final Drive", "");
+
+    var submenu13 = menu7.addMenu(menu7.items[0]);
+    var submenu14 = menu7.addMenu(menu7.items[1]);
+    var submenu15 = menu7.addMenu(menu7.items[2]);
+    var submenu16 = menu7.addMenu(menu7.items[3]);
+
+    submenu13.addItem("Rotors", "./07_Frame/03_Brakes/Rotors.html"); //brakes
+    submenu13.addItem("Judder", "./07_Frame/03_Brakes/Judder.html");
+    submenu13.addItem("Squeal", "./07_Frame/03_Brakes/Squeal.html");
+
+    submenu14.addItem("Settings", "./07_Frame/04_Suspension/03_Adjustments/Settings.html"); //suspension
+    submenu14.addItem("Sag", "./07_Frame/04_Suspension/03_Adjustments/Sag.html");
+    submenu14.addItem("Advanced Sag", "./07_Frame/04_Suspension/03_Adjustments/SagThede.html");
+    submenu14.addItem("Damper Adjustment", "./07_Frame/04_Suspension/03_Adjustments/Dampening.html");
+    submenu14.addItem("Shock", "./07_Frame/07_Shock/Shock.html");
+
+    submenu15.addItem("Steering Damper", "./07_Frame/06_SteeringDamper/SteeringDamper.html"); //SteeringDamper
+
+    submenu16.addItem("Chain Specs", "./07_Frame/12_FinalDrive/chainspecs.jpg"); //final drive
+    submenu16.addItem("Chain & Sprocket", "./07_Frame/12_FinalDrive/Chain&Sprockets.html");
+    submenu16.addItem("Alt. Front Sprocket", "./07_Frame/12_FinalDrive/FrontSprocket.html");
+    submenu16.addItem("Alignment", "./07_Frame/12_FinalDrive/Alignment.html");
+
+    //==================================================================================================
+    var menu8 = ms.addMenu(document.getElementById("fuel"));
+    menu8.addItem("EMS Sensors", "");
+    menu8.addItem("Ignite/Inject", "");
+    menu8.addItem("ECU", "");
+    menu8.addItem("Fuel Filter", "./08_FuelIgnition/05_FuelFilter/FuelFilter.html");
+
+    var submenu16 = menu8.addMenu(menu8.items[0]);
+    var submenu17 = menu8.addMenu(menu8.items[1]);
+    var submenu18 = menu8.addMenu(menu8.items[2]);
+
+    submenu16.addItem("Tip-Over-Switch", "./08_FuelIgnition/01_EMS_Sensors/TipOverSwitch.html");//Sensors
+    submenu16.addItem("Induction Air", "./08_FuelIgnition/01_EMS_Sensors/InductionAirTemp.html");
+    submenu16.addItem("Throttle Position", "./08_FuelIgnition/01_EMS_Sensors/ThrottlePosition.html");
+
+    submenu17.addItem("Coil Sticks", "./08_FuelIgnition/02_IgnitionAndInjection/AlternativeCoils.html");//ignite inject
+    submenu17.addItem("Injectors", "./08_FuelIgnition/02_IgnitionAndInjection/AlternativeInjectors.html");
+    submenu17.addItem("Stepper", "./08_FuelIgnition/02_IgnitionAndInjection/Stepper.html");
+    submenu17.addItem("Stepper Setting", "./08_FuelIgnition/02_IgnitionAndInjection/StepperSetting.html");
+
+    submenu18.addItem("Tunes", "./08_FuelIgnition/03_ECU/Tunes.html");//ECU
+    submenu18.addItem("Fuel Economy", "./08_FuelIgnition/03_ECU/ImproveEconomy.html");
+    submenu18.addItem("Motec on Lambda", "./08_FuelIgnition/03_ECU/MotecOnLambda.html");
+
+    //==================================================================================================
+    var menu9 = ms.addMenu(document.getElementById("electrical"));
+    menu9.addItem("Dash", "");
+    menu9.addItem("Battery", "");
+    menu9.addItem("Starter Motor", "");
+    menu9.addItem("Alternator", "");
+    menu9.addItem("Neutral Switch", "./09_Electrical/12_NeutralSwitch/NeutralSwitch.html");
+    menu9.addItem("Front Lights", "");
+    menu9.addItem("Rear Lights", "./09_Electrical/18_RearLights/RearIndicators.html");
+
+    var submenu19 = menu9.addMenu(menu9.items[0]);
+    var submenu20 = menu9.addMenu(menu9.items[1]);
+    var submenu21 = menu9.addMenu(menu9.items[2]);
+    var submenu22 = menu9.addMenu(menu9.items[3]);
+    var submenu23 = menu9.addMenu(menu9.items[5]);
+
+    submenu19.addItem("Service Flag", "./09_Electrical/01_Dash/ResetServiceFlag.html");//dash
+    submenu19.addItem("Units Change", "./09_Electrical/01_Dash/ChangeGaugeUnits.html");
+    submenu19.addItem("Resetting Fault", "./09_Electrical/01_Dash/ResettingClocks.html");
+    submenu19.addItem("Dash UPS", "./09_Electrical/01_Dash/DashUPS.html");
+
+    submenu20.addItem("Cables", "./09_Electrical/04_Battery/BatteryCables.html");//battery
+    submenu20.addItem("Alternate", "./09_Electrical/04_Battery/Battery.html");
+
+    submenu21.addItem("Starter Relay", "./09_Electrical/07_StarterMotor/StarterRelay.html");//starter motor
+    submenu21.addItem("Starter Gear", "./09_Electrical/07_StarterMotor/StarterGear.html");
+
+    submenu22.addItem("Drive Gear", "./09_Electrical/08_Alternator/NoisyAlternator.html");//alternator noise
+    submenu22.addItem("Alternator Drive", "./09_Electrical/08_Alternator/Alternator.html");//alternator drive
+
+    submenu23.addItem("Low Beam", "./09_Electrical/17_FrontLights/LowBeam.html");//front lights
+    submenu23.addItem("HID Retrofit", "./09_Electrical/17_FrontLights/HID.html");
+    submenu23.addItem("HB Mount Failure", "./09_Electrical/17_FrontLights/HBLampMount.html");
+
+
+    //==================================================================================================
+    var menu10 = ms.addMenu(document.getElementById("diagnostics"));
+    menu10.addItem("Electrical", "./10_Diagnostics/01_Electrical/WiringError.html");
+    menu10.addItem("Frame Knock", "./10_Diagnostics/02_Frame/FrontEndKnock.html");
+    menu10.addItem("Engine Dies", "./10_Diagnostics/03_Engine/EngineDies.html");
+    menu10.addItem("Hot Start Fault", "./10_Diagnostics/03_Engine/HotStart.html");
+    menu10.addItem("No Gearshift", "./10_Diagnostics/04_Gearbox/WontShift.html");
+
+    //==================================================================================================
+    var menu11 = ms.addMenu(document.getElementById("aftermarket"));
+    menu11.addItem("Head Up Display", "./11_Aftermarket/01_HMD/HMD.html");
+    menu11.addItem("Front Stand", "./11_Aftermarket/05_FrontStand/FS.html");
+
+    //==================================================================================================
+    var menu12 = ms.addMenu(document.getElementById("tr650"));
+    menu12.addItem("Pro-Oiler Install", "./12_TR650/01_Pro-Oiler_Install/ProOiler.html");
+
+    //==================================================================================================
+    var menu13 = ms.addMenu(document.getElementById("trek"));
+    menu13.addItem("TreK Centre Stand", "./14_TreK/01_Main_Stand/TreKmainStand.html");
+
+
+    //==================================================================================================
+    // write drop downs into page
+    //==================================================================================================
+    // this method writes all the HTML for the menus into the page with document.write(). It must be
+    // called within the body of the HTML page.
+    //==================================================================================================
+    TransMenu.renderAll();
+  }
+  </script>
+
+<p>
+  <center>
+    <h1><img src="austflag.gif" alt="Aussie Flag"> <font color="#DC1B30"><font size="+4"><font face="Georgia">
+Engenia's Tornado 900 Tre</font></font></font> <img src="austflag.gif" alt="Aussie Flag"></h1></center>
+
+  <table>
+    <tr>
+      <td><img src="TornadoRedLHS.jpg" width="496" height="366" alt="Left Side"></td>
+      <td><img src="MGP.exhaust.jpg" width="496" height="366" alt="Right Side"></td>
+      <td><a href="http://www.benelliforum.com/#login-box" target="_blank"><img src="benelli-welcome.png" width="484" height="332" alt="Link to the BenelliForum"></a></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>
+        <center>
+          The best motorcycle forum on the planet
+        </center>
+      </td>
+
+    </tr>
+
+    <tr>
+      <td><img src="BonangHwy2nd90Sign.jpg" width="496" height="366" alt="Bonang Hwy 2nd 90 km sign"></td>
+      <td><img src="TawongaGap.jpg" width="496" height="366" alt="Tawonga Gap"></td>
+      <td><img src="TassyFuelStop1.jpg" width="496" height="366" alt="First Fuel stop in Tasmania"></td>
+    </tr>
+
+    <tr>
+      <td>
+        <center>
+          Bonang Highway, heading north, 25km north of Orbost, Vic, Mch 2006.<br>
+          5 km north of Orbost there is another one exactly the same!
+        </center>
+      </td>
+
+      <td>
+        <center>
+          Tawonga Gap, near Mt Beauty, Vic. - Mch 2006
+        </center>
+      </td>
+      <td>
+        <center>
+          First Fuel stop in Tasmania, Oct 2007
+        </center>
+       </td>
+    </tr>
+  </table>
+
+  </center>
+</p>
+
+<script type="text/javascript">
+// Google Internal Site Search script- By JavaScriptKit.com (http://www.javascriptkit.com)
+// For this and over 400+ free scripts, visit JavaScript Kit- http://www.javascriptkit.com/
+// This notice must stay intact for use
+
+//Enter domain of site to search.
+var domainroot="www.engenia.com.au"
+
+function Gsitesearch(curobj){curobj.q.value="site:"+domainroot+" "+curobj.qfront.value}
+</script>
+
+
+<form action="http://www.google.com/search" method="get" onSubmit="Gsitesearch(this)" target="_blank">
+
+<p>
+<input name="q" type="hidden" />
+<input name="qfront" type="text" style="width: 200px" />
+<input type="submit" value="Search Engenia (with Google)" />
+</p>
+</form>
+
+<p><font size="-2"><center> Updated 3 May 2023 (Shock Removal)</center></font>
+</p>
+
+</body>
+
+</html>

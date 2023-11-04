@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+<TITLE>Economy</TITLE>
+<META name="description" content="">
+<META name="keywords" content="">
+</HEAD>
+<BODY BGCOLOR=FFFFFF TEXT=000000 LINK=0000FF VLINK=800080>
+<p><center><h3>Fuel Econony of #922 - before Motty AFR Tuner fitted</h3><br>
+(updated 27 Jul 2017)</p>
+
+<table border="1">
+ <tr>
+ <th>Cycle</th>
+ <th>l/100km</th>
+ <th>mpg</th>
+ </tr>
+ <tr>
+  <td>Best Tank</td>
+  <td>5.62</td>
+  <td>50</td>
+ </tr>
+ <tr>
+  <td>Country</td>
+  <td>7.1</td>
+  <td>40</td>
+ </tr>
+ <tr>
+  <td>Average over 38,000km</td>
+  <td>7.94</td>
+  <td>36</td>
+ </tr>
+ <tr>
+  <td>City</td>
+  <td>8.9</td>
+  <td>32</td>
+ </tr>
+ <tr>
+  <td>Worst Tank</td>
+  <td>9.73</td>
+  <td>29</td>
+ </tr>
+ <tr>
+  <td>Track</td>
+  <td>who</td>
+  <td>cares</td>
+ </tr>
+
+</table>
+
+<p>mpg = miles per imperial gallon<br>
+l/100km = litres per 100 kilometres</p>
+</center>
+
+<p>In the graph below, you'll notice the gradual increase in litres /100km from the very beginning.
+ The engine was running excessively rich, at low to mid revs so the economy wasn't as good as it could have been. 
+ The increased fuel use was due to a build-up of carbon in the exhaust valve seats.
+ As this increased in depth, it leaked more & more, reducing the cylinder pressure.
+ Eventually, a piece of carbon broke out, reducing the compression to zero on one cylinder.
+ At that point, the head came off, and the valves were re-ground.
+ Also, at that point, I fitted the Motty AFR Tuner and new rings.
+ The combination of excellent compression & a leaner burn resulted in a vast improvement in economy.<br>
+ This happened again at the 95,000 km mark, so the leaner burn didn't fix the problem.
+ It turned out to be caused by my use of mineral oil instead of synthetic.
+ The additives in the oil attached to the cooler exhaust valve stems and as they built up, they restricted the valve movement,
+ reducing their ability to seal. The slight leak was filled with carbon.<br>
+ I learnt a valuable lesson. When Benelli specified a synthetic engine oil, they did it for a reason.
+</p>
+<center>
+<TABLE border="1">
+  <TR>
+    <td><IMG src="Economy0-75K.png" alt="Economy graph 0 - 75,000 km" width="574" height="254" align="middle" border="0"></td>
+  </TR>
+  <TR>
+    <td><center> Economy Graph 0 - 75,000 km</center></td>
+  </TR>
+
+</TABLE>
+</center>
+</BODY>
+</HTML>
