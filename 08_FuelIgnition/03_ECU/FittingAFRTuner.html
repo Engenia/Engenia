@@ -1,0 +1,395 @@
+<HTML>
+<HEAD>
+<TITLE>Fitting a Motty AFR Tuner to a Tornado 900</TITLE>
+</HEAD>
+<BODY BGCOLOR=FFFFFF TEXT=000000 LINK=0000FF VLINK=800080>
+
+<P><center><font size="+2"><STRONG>Nell's Motty AFR Tuner Install</STRONG></font></center></P>
+<p>There are two ways to install an AFR Tuner. Either with minimal loom modification, or not.<br>
+The latter requires the unwrapping of the main loom from the fuse box to just behind the engine, and splicing into the relevant
+ wires, using soldered joints. With this method, Items 5 to 13, in the Parts List below, can be deleted.<br />
+The former is the way Nell was wired initially. It requires the creation of cable stubs, to make connections using the standard
+ connectors. Some of these are difficult to acquire, but the cabling can be restored to almost original quite easily.
+Recently, while installing an electric water pump, the wiring was changed to the latter, as it requires much less space,
+ and with the addition of the epump wiring that space was becoming scarce.<br />
+Both #922 & and RS #298 are fitted with ATs, and I believe 1 other. All use the full loom modification method.
+</p>
+
+<center><font size="+1"><b>Wiring Diagrams</b></font><br>
+<a href="Tornado.922.AT.wiring.pdf"><IMG border="1" alt="Tornado #922 AFR Tuner Wiring" src="922ATwiring.jpg" width="640" height="391" name=""></a>
+<a href="Tornado.AT.wiring.pdf"><IMG border="1" alt="Tornado AFR Tuner Wiring" src="ATwiring.jpg" width="640" height="391" name=""></a><br>
+(click an image to download the wiring diagram pdf)</center><br>
+The following describes the minimal loom modification method<br>
+1. Connecting Main pin 20 to P1E4 MAY result in a cleaner TPS signal, but I haven't tried it.<br>
+2. Only 4 wires are spliced into the loom. All other connections are made by adding cable stubs.<br>
+3. The wire colours chosen, are not necessarily those found in the loom supplied by Motty.<br>
+
+<P><font size="+1"><b><center>Parts List</center></b></font></font><br>
+
+<table border="1">
+ <tr>
+ <td>Item</td>
+ <td>Qty</td>
+ <td>Description</td>
+ <td>Manufacturer</td>
+ <td>Part Number</td>
+ <td>Source</td>
+ <td>Use</td>
+ </tr>
+ <tr>
+ <td>1</td>
+ <td>1</td>
+ <td>AFR Tuner, cables and mounting strips</td>
+ <td>Motty</td>
+ <td>AT2.2</td>
+ <td><a href="http://www.afrtuner.com/order" target="_blank">Motty Electronics</a></td>
+ <td>modifys the ECU injection times dependant on throttle position, rpm, current AFR and your AFR map</td>
+ </tr>
+ <tr>
+ <td>2</td>
+ <td>1</td>
+ <td>wideband lambda sensor</td>
+ <td>Bosch</td>
+ <td>0 258 007 200</td>
+ <td>generally available, but try <a href="http://wbo2.com/lsu/sensors.htm" target="_blank">Tech Edge</a>, <a href="http://www.afrtuner.com/order" target="_blank">Motty</a> or  <a href="http://www.innovatemotorsports.com/xcart/home.php?cat=250" target="_blank">Innovate Motorsports</a></td>
+ <td>measures the amount of oxygen in the exhaust</td>
+ </tr>
+ <tr>
+ <td>3</td>
+ <td>1</td>
+ <td>stainless steel collar M18x1.5, 25mm OD, 16mm long shaped to but to a 50mm exhaust pipe</td>
+ <td>Innovate Motor Sports</td>
+ <td>3736</td>
+ <td>your local machine shop, <a href="http://www.afrtuner.com/order" target="_blank">Motty</a> or <a href="http://www.innovatemotorsports.com/xcart/home.php?cat=250&sort=orderby&sort_direction=0&page=2" target="_blank">Innovate Motorsports</a></td>
+ <td>weld this to your exhaust to mount the lambda sensor. See below for the position.</td>
+ </tr>
+ <tr>
+ <td>4</td>
+ <td>1</td>
+ <td>Handlebar switch right hand kill on-off & start</td>
+ <td>Hi Level</td>
+ <td>694605</td>
+ <td><a href="http://motorcycleproducts.co.uk/catalogue/handlebar-switch-right-hand-kill-onoff-start-p-83110.html?osCsid=32c996d2e424c1cc0ecdebfef0c46e44"  target="_blank">Motorcycle Products</a></td>
+ <td>replaces existing switch block to enable map switching (re-wiring required)</td>
+ </tr>
+ <tr>
+ <td>5</td>
+ <td>4</td>
+ <td>2 pin female connector & boot</td>
+ <td>Bosch</td>
+ <td>1 287 013 003-000</td>
+ <td>generally available, but in Oz: <a href="http:///www.ashdown-ingram.com.au" target="_blank">Ashdown-Ingram</a></td>
+ <td>to connect to Engine Temp Sensor & injectors</td>
+ </tr>
+ <tr>
+ <td>6</td>
+ <td>4</td>
+ <td>2 pin male connector & boot</td>
+ <td>Bosch</td>
+ <td>1 287 013 002-000</td>
+ <td>generally available, but in Oz: <a href="http:///www.ashdown-ingram.com.au" target="_blank">Ashdown-Ingram</a></td>
+ <td>to connect to the OEM loom: Engine Temp Sensor connector & injector connectors</td>
+ </tr>
+ <tr>
+ <td>7</td>
+ <td>1</td>
+ <td>3 pin female connector & boot</td>
+ <td>Bosch</td>
+ <td>1 237 000 003-000</td>
+ <td>rare, but in Oz: <a href="http:///www.ashdown-ingram.com.au" target="_blank">Ashdown-Ingram</a></td>
+ <td>to connect to the Throttle Position Sensor</td>
+ </tr>
+ <tr>
+ <td>8</td>
+ <td>1</td>
+ <td>3 pin male connector</td>
+ <td>Tyco/AMP</td>
+ <td>Housing: 1-0144546-0, (3) Male pins: 0-0142755-1</td>
+ <td>extremely rare, unless you want 1,000. I managed to procure samples from Boersig GmbH, in Neckarsulm, Germany. Thomas is an absolute legend.
+ Possibly also available from <a href="http://instock.onlinecomponents.com/AMP-TYCO/1-144546-0.html" target="_blank">onlinecomponents.com</a></td>
+ <td>to connect to the OEM loom: Throttle Position Sensor connector</td>
+ </tr>
+ <tr>
+ <td>9</td>
+ <td>1</td>
+ <td>3 pin female connector housing</td>
+ <td>Tyco/AMP</td>
+ <td>282087-1</td>
+ <td>Farnell 150-423</td>
+ <td>connects to speed sensor cable to tap off speed & +12V supply</td>
+ </tr>
+ <tr>
+ <td>10</td>
+ <td>3</td>
+ <td>20-16AWG (0.64-1.3 mm<sup>2</sup>) crimp socket</td>
+ <td>Tyco/AMP</td>
+ <td>183025-1</td>
+ <td>Farnell 151-075</td>
+ <td>to suit above</td>
+ </tr>
+ <tr>
+ <td>11</td>
+ <td>1</td>
+ <td>3 pin male connector housing</td>
+ <td>Tyco/AMP</td>
+ <td>282087-1</td>
+ <td>Farnell 150-423</td>
+ <td>connects to speed sensor cable to tap off speed & +12V supply</td>
+ </tr>
+ <tr>
+ <td>12</td>
+ <td>3</td>
+ <td>20-15AWG (0.64-1.5 mm<sup>2</sup>) crimp pin</td>
+ <td>Tyco/AMP</td>
+ <td>183024-1</td>
+ <td>Farnell 151-040</td>
+ <td>to suit above</td>
+ </tr>
+ <tr>
+ <td>13</td>
+ <td>6</td>
+ <td>Green wire seals</td>
+ <td>Tyco/AMP</td>
+ <td>281934-4 </td>
+ <td>Farnell 150-915</td>
+ <td>seals the wires in the 2 housings above</td>
+ </tr>
+ <tr>
+ <td>14</td>
+ <td>1</td>
+ <td>extraction tool</td>
+ <td>Molex</td>
+ <td>11-03-0044</td>
+ <td><a href="http://search.digikey.com/scripts/DkSearch/dksus.dll?Detail?name=WM9918-ND">Digi-Key WM9918-ND</a></td>
+ <td>tool to remove pins from the AT Main plug</td>
+ </tr>
+ <tr>
+ <td>15</td>
+ <td>20</td>
+ <td>24-18AWG (0.2-0.78 mm<sup>2</sup>) Female Crimp Contact</td>
+ <td>Molex</td>
+ <td>39-00-0207</td>
+ <td><a href="http://search.digikey.com/scripts/DkSearch/dksus.dll?Detail?name=WM3116CT-ND">DigiKey WM3116CT-ND</td>
+ <td>to suit AT Main Plug</td>
+ </tr>
+ <tr>
+ <td>16</td>
+ <td>2 m each</td>
+ <td>0.75 mm<sup>2</sup> Black (2x), Brown, Red, Orange, Yellow, White pvc insulated wire</td>
+ <td>.</td>
+ <td>.</td>
+ <td>.</td>
+ <td>.</td>
+ </tr>
+ <tr>
+ <td>17</td>
+ <td>2 m each</td>
+ <td>0.5 mm<sup>2</sup> Brown, Red, Orange, Yellow, Green, Blue, Violet, Grey, White, Pink pvc insulated wire</td>
+ <td>.</td>
+ <td>.</td>
+ <td>.</td>
+ <td>.</td>
+ </tr>
+ <tr>
+ <td>18</td>
+ <td>1 m</td>
+ <td>4 mm pvc tubing</td>
+ <td>ProPower</td>
+ <td>PVC-4-0-CL</td>
+ <td>Farnell 130-2785</td>
+ <td>to cover the injector & temp sensor wires of the AT loom</td>
+ </tr>
+ <tr>
+ <td>19</td>
+ <td>1 m</td>
+ <td>6 mm pvc tubing</td>
+ <td>ProPower</td>
+ <td>PVC-6-0-CL</td>
+ <td>Farnell 130-2785</td>
+ <td>to cover the TPS wires to the AT loom</td>
+ </tr>
+ <tr>
+ <td>20</td>
+ <td>1 roll</td>
+ <td>cloth backed 20 mm wide automotive looming tape</td>
+ <td>United Partners P/L</td>
+ <td>N1010</td>
+ <td>K&R Car Parts, Seven Hills, NSW</td>
+ <td>for wrapping the AT loom</td>
+ </tr>
+</table>
+
+<p><center><font size="+1"><b>Fitting the Lambda Sensor</font></b></center><br>
+The Lambda probe will fit just in front of the exhaust pipe mount, but behind the gearbox, angled to miss the clutch cover. I
+ shaped the collar base to fit the curvature of the pipe, marked the position on the pipe, then drilled a hole in the pipe, just
+ large enough to allow the probe to fit through. A bolt then held the collar in position for welding.
+</p>
+
+<table border="1">
+ <tr>
+ <td><center><img src="./Motty/Fitting/40_LambdaProbe.jpg" alt="Lambda probe site" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/41_LambdaProbe.jpg" alt="Lambda probe collar" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/42_LambdaProbe.jpg" alt="Lambda probe collar angle" width="320" height="240"></center></td>
+ </tr>
+ <tr>
+ <td><center>Lambda probe site</center></td>
+ <td><center>Lambda probe collar</center></td>
+ <td><center>Lambda probe collar angle</center></td>
+ </tr>
+</table>
+<p>The collar is just a little close too the exhaust mount. The TIG torch very nearly didn't get in close enough. 10mm further
+ upstream would have made the welding task much easier.
+</p>
+
+<p><center size="+1"><b>Fitting the AFR Tuner</center></font></b><br>
+Firstly, remove the ducktail, right lower & upper panels, the tank, and right airways. You'll then have access to everything you
+ need to get to.
+</p>
+<br>
+<table border="1">
+ <tr>
+ <td><center><img src="./Motty/Fitting/01_TailSite.jpg" alt="AT Mounting Position" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/02_3M_DualLockPlacement.jpg" width="320" height="240" alt="AT Mountin Tabs"></center></td>
+ <td><center><img src="./Motty/Fitting/03_FuseBoxMtHoleMod.jpg" width="320" height="240" alt="Raise Fusebox"></center></td>
+ </tr>
+ <tr>
+ <td><center>The AFR Tuner (AT) mounts above the right fan pod</center></td>
+ <td><center>The AT is held in place with 3M "Dual Lock"</center></td>
+ <td><center>The fusebox must be raised or shifted left.</center></td>
+ </tr>
+</table>
+<p>The AT will fit in the duck tail, between the fans as shown above, if the fusebox is raised, moved left, or allowed to float
+ freely. Initially, just lift it off it's clip. The top of the AT metal case should be protected from connecting to the frame by
+ super gluing a piece of PETE (from a 2 litre juice bottle) to it.<br>
+Motty supply 4 pieces of Dual Lock in the AT kit. Clean off the fan & AT housings with isopropyl alcohol, and when dry, stick 2 to
+ the end of the AT (as shown), then slip it into position. Rotate the part sticking to the fan, so that it follows the curvature of
+ the fan housing. Next, remove the AT & stick the remaining 2 pieces to it's underside, in a position that will line up with the
+ right housing.<br>
+I raised the fusebox by rotating it's clip through 180<sup>o</sup>. An extra notch is required though, and the pillion seat will touch it.
+</p>
+<table border="1">
+ <tr>
+ <td><center><img src="./Motty/Fitting/04_FuseBoxMtHoleMod.jpg" alt="clip hole slotted" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/05_FuseBoxMtClip.jpg" alt="clip in profile" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/06_FuseBoxMtClip.jpg" alt="clip mount" width="320" height="240"></center></td>
+ </tr>
+ <tr>
+ <td><center>File a vertical slot so that the clip can be rotated 180<sup>o</sup></center></td>
+ <td><center>The fusebox clip in profile</center></td>
+ <td><center>End view of the fusebox clip</center></td>
+ </tr>
+</table>
+<p>Take care when removing the clip. The tips are sprung loaded, and must be squeezed together to allow the clip to be withdrawn.
+</p>
+<table border="1">
+ <tr>
+ <td><center><img src="./Motty/Fitting/07_FuseBoxMtClip.jpg" alt="clip in place" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/08_Mtd_PartWired.jpg" alt="fusebox wiring unwrapped" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/09_Mtd_PartWired.jpg" alt="taped for wrapping" width="320" height="240"></center></td>
+ </tr>
+ <tr>
+ <td><center>The clip in place</center></td>
+ <td><center>Wiring to the fusebox is unwrapped to improve placement</center></td>
+ <td><center>Diag. plug moved to fit AT coms & aux. power outlet</center></td>
+ </tr>
+</table>
+<p>Now that the clip is remounted, unwrap the looming tape from the wiring to the fan plugs & fusebox, to allow re-looming in a more
+ appropriate position - later.<br>
+Mount the AT, and move the diagnostics plug to the position shown. Also move the diode plug & assembly back and across, to make room
+ for the AT coms plug. I have an accessories power supply jack that I fitted a while back (to charge my phone & gps receiver), which
+ had to be re-positioned as well.
+</p>
+<table border="1">
+ <tr>
+ <td><center><img src="./Motty/Fitting/10_RHS_Looms.jpg" alt="RHS Looms" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/12_InjectorPlug.jpg" alt="Injector Plug Plan" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/13_InjectorPlug.jpg" alt="Injector Plug Face" width="320" height="240"></center></td>
+ </tr>
+ <tr>
+ <td><center>Cables L-R: AT coms, Lambda, Fusebox, AT Main</center></td>
+ <td><center>OEM Injector Plug</center></td>
+ <td><center>Injector Plug Face</center></td>
+ </tr>
+</table>
+
+<p>It's now time to remove the battery and the ECU.</p>
+<table border="1">
+ <tr>
+ <td><center><img src="./Motty/Fitting/16_LoomsAtFuelRail.jpg" alt="Looms At Fuel Rail" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/17_NewTPSplug.jpg" alt="New TPS plug" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/18_LoomLeft.jpg" alt="AT Loom Left side" width="320" height="240"></center></td>
+ </tr>
+ <tr>
+ <td><center>OEM & AT Looms at the fuel rail</center></td>
+ <td><center>New TPS plug fitted</center></td>
+ <td><center>AT Loom Left side track</center></td>
+ </tr>
+</table>
+
+<table border="1">
+ <tr>
+ <td><center><img src="./Motty/Fitting/19_LoomBehindEngine.jpg" alt="??" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/20_LoomCentre.jpg" alt="??" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/21_MainGnds&rpm.jpg" alt="Main Gnds & rpm" width="320" height="240"></center></td>
+ </tr>
+ <tr>
+ <td><center>Loom behind the engine</center></td>
+ <td><center>loom in the ctr - lambda plug unconnected</center></td>
+ <td><center>Main Gnds & rpm wires pre-soldering</center></td>
+ </tr>
+</table>
+
+<table border="1">
+ <tr>
+ <td><center><img src="./Motty/Fitting/22_MainGnds&rpm.jpg" alt="Main Gnds & rpm" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/23_MainGnds&rpm.jpg" alt="Main grounds & rpm signal" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/24_ECU_P2.jpg" alt="P2 detail" width="320" height="240"></center></td>
+ </tr>
+ <tr>
+ <td><center>Main grounds & rpm wires ready</center></td>
+ <td><center>Main grounds & rpm wires connect to P2</center></td>
+ <td><center>More P2 detail</center></td>
+ </tr>
+</table>
+
+<table border="1">
+ <tr>
+ <td><center><img src="./Motty/Fitting/26_ECU_P2.jpg" alt="ECU P2" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/27_ECU_P2.jpg" alt="ECU P2" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/28_ECU_P2.jpg" alt="ECU P2" width="320" height="240"></center></td>
+ </tr>
+ <tr>
+ <td><center>Forming up P2 loom</center></td>
+ <td><center>P2 loom again - pre-wrap</center></td>
+ <td><center>P2 loom formed & wrapped</center></td>
+ </tr>
+</table>
+
+<table border="1">
+ <tr>
+ <td><center><img src="./Motty/Fitting/29_ECU_P1&2.jpg" alt="ECU P1 & P2" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/30_LoomsToECU.jpg" alt="Looms to ECU" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/31_LoomBelowECU.jpg" alt="Loom Below ECU" width="320" height="240"></center></td>
+ </tr>
+ <tr>
+ <td><center>ECU P1 & P2</center></td>
+ <td><center>Looms to ECU</center></td>
+ <td><center>Loom Below ECU</center></td>
+ </tr>
+</table>
+
+<table border="1">
+ <tr>
+ <td><center><img src="./Motty/Fitting/32_LoomRightRear.jpg" alt="??" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/33_LoomAtAT.jpg" alt="??" width="320" height="240"></center></td>
+ <td><center><img src="./Motty/Fitting/34_TailRe-Loomed.jpg" alt="??" width="320" height="240"></center></td>
+ </tr>
+ <tr>
+ <td><center>completed loom at right rear</center></td>
+ <td><center>completed loom at AT</center></td>
+ <td><center>tail re-wrapped</center></td>
+ </tr>
+</table>
+<p><center><font size="+1"><STRONG>Sadly, Tamas no longer produces his Motty AFR Tuner</STRONG></font></center></p>
+</BODY>
+</HTML>

@@ -1,0 +1,79 @@
+Subject:
+AFR Tuner firmware
+From:
+Motty Electronics <mottyelectronics@externet.hu>
+Date:
+Mon, 21 Jul 2008 13:19:20 +0200
+To:
+errol.kowald@ieee.org
+
+It rejected the password protected zip too.
+
+Please get the file from:
+http://w3.externet.hu/~motty/AFR_Tuner_Configurator-2.30_tmp.zip
+
+Tamas
+
+----- Forwarded message from mottyelectronics@externet.hu -----
+    Date: Mon, 21 Jul 2008 13:11:08 +0200
+    From: Motty Electronics <mottyelectronics@externet.hu>
+Reply-To: Motty Electronics <mottyelectronics@externet.hu>
+ Subject: AFR Tuner firmware
+      To: errol.kowald@ieee.org
+
+The mail come back due to rejected attachment type (zipped exe).
+
+So this time I'll double zip the .exe with password, which is afrtuner.
+
+Tamas
+
+----- Forwarded message from mottyelectronics@externet.hu -----
+     Date: Mon, 21 Jul 2008 12:55:37 +0200
+     From: Motty Electronics <mottyelectronics@externet.hu>
+Reply-To: Motty Electronics <mottyelectronics@externet.hu>
+  Subject: AFR Tuner firmware
+       To:
+
+Hi Errol,
+
+I just realized that your AT was shipped with the v2.24 firmware that
+doesn't yet support leaving any of the injector inputs unconnected.
+
+Unfortunately this means that you will have to start with upgrading
+the firmware to the attached unofficial pre-release v2.30.6 version.
+Please make sure that the AT has a stable power feed so there is no
+chance that the power will disappear during the upgrade (10-15 seconds).
+
+This v2.30.6 is the latest unofficial build. It allows using the unit
+on 1-4 cylinder engines, it has some internal improvements and it also
+has the new user configurable "gear dependent self mapping throttle
+ranges" user feature (I recommend leaving it on defaults for a while;
+allowing the self mapping at high TP in the lower gears is not
+recommended).
+
+This firmware requires upgrading the AFR Tuner Configurator for
+compatibility too. You can simply overwrite the afrtuner.exe in your
+AFR Tuner installation directory with the attached new Configurator
+file.
+
+The firmware variant needed for your bike is not known yet, so I
+recommend starting with 22440000.
+
+Best regards,
+Tamas
+
+----- End forwarded message -----
+
+----- End forwarded message -----
+
+
+-------------------------------------------------
+  Externet Webmail: http://webmail.externet.hu
+
+AT-Debug-2.30.6.zip
+	
+Content-Type:
+	application/zip
+Content-Encoding:
+	base64
+

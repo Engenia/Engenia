@@ -1,0 +1,33 @@
+Subject:
+AFR Tuner release v2.31 notification
+From:
+Motty Electronics <mottyelectronics@externet.hu>
+Date:
+Mon, 25 Aug 2008 19:38:19 +0200
+To:
+undisclosed-recipients: ;
+
+Hi,
+
+I would just like to inform you that a new firmware version (v2.31) was released for the AFR Tuner at the end of August.
+
+The biggest visible change is the addition of the gear dependent self mapping throttle ranges feature, but there have been other important internal changes too. It is strongly recommended to take the new firmware into use.
+
+The new firmware together with the new PC software package can be downloaded from http://www.afrtuner.com/downloads.html.
+
+After the upgrade please visit the advanced settings page to configure the new settings (can be done by simply pressing the "Set defaults" button).
+
+Here is the description of the new self mapping throttle ranges feature from the updated user manual:
+
+Self mapping throttle ranges
+----------------------------
+It is possible to restrict the operation of the self mapping to certain throttle position ranges for each gears. Ideally the mapping should take place in the higher gears to account for the ram air effect, but in some applications (e.g. racing) allowing the self mapping in the lower gears can also be desirable. The self mapping can be totally disabled for a gear by setting both the low and high TPS limits to zero.
+
+Best regards,
+Tamas Varga
+Motty Electronics
+
+
+-------------------------------------------------
+  Externet Webmail: http://webmail.externet.hu
+
