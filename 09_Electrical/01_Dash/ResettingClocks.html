@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<TITLE>Tornado Dash</TITLE>
+</HEAD>
+<BODY BGCOLOR=FFFFFF TEXT=000000 LINK=0000FF VLINK=800080>
+
+<P><center><font size=+2><STRONG>Resetting Clock & Trip Meter</STRONG></font><br>
+03 Dec 2007</center></P>
+
+<p>It's a cold morning and you've decided to take Nelli for a blast though the hills. You turn her on,
+ the dash goes through it's familiar dance, then you hit the starter. She turns over a couple of times, then
+ stops briefly, before continuing, then firing up. You notice that the dash is repeating its 'dance'. Then you
+ realise that the clock has reset to 12:00, the trip meter is back at 00.0 and, if you had the lap timer
+ running (unlikely), it is back to 00:00:00.</p>
+
+<p>Sound familiar? Well, here's how to fix it.</p>
+
+<p>If you still have one of the original dash's (revision A in particular), you would find that it resets just
+ about every time you start the bike. This happens because the battery is too small for the job, and when
+ cranking the engine, the voltage drops below that needed to keep the dash electronics alive.<br>
+When I first picked up my Tre, I was baffled by how she knew that I had just refueled her. Then I realised that
+ the clock was resetting as well ...... the penny dropped.<br>
+When I got home I called the local guru, JohnnyO, and he sent me a new dash. He let me keep the original so
+ that I could investigate the problem. He had a box full of them. So that's how I started on this project - the
+ Tre Dash UPS.<br>
+Now, at version 4, the solution is found.</p>
+
+<p><strong><center>Past Attempts</center></strong></p>
+
+<p>* The new dash - revision D - is much better than the original, but is still susceptible. It reset on me
+ every month or so.<br>
+* Some put their nelli's on a charger overnight to get around the problem. This made sure that the battery
+ was in peak condition for the morning start.<br>
+* AussieRS is trying a starter gear ratio reduction.<br>
+* Squeeze in a bigger battery. I tried this as well. It's similar to putting it on charge each night.
+ There's more power available for cranking. Just masks the real problem though.<br>
+* Others don't care.</p>
+
+<p>I tour on the thing, so the clock & trip meter are important to me.</p>
+
+<p>The perfect solution is to change the dash circuit, and protect the data, but this is a monumental task.<br>
+So instead, an Uninterruptible Power Supply (UPS) was added to the dash. This also masks the problem, but will
+ do the job better than uprating the main battery, as far less energy is required to hold up the voltage when
+ cranking current is not supplied as well.<br>
+There's now 2 batteries. The second is there only to hold up the dash supply voltege, when the main battery
+ voltage drops too low.</p>
+
+
+<p><strong><center>Dash Revisions</center></strong></p>
+<p>One other thing, the revision A dash operates differently to revision D. When you hold the mode key down
+ on the 'A', the mode changes before your eyes after several seconds. The 'D' changes once you release the
+ key. If you didn't hold it down for long enough, nothing happens. Personally, I like the 'A' method better,
+ so that's the one I'll be using once the UPS is up and running.<br>
+Finally, the odometer reading is stored in non-volatile memory (electrically erasible flash), so it will not
+ reset. You can reset it, if you try really hard, but that involves direct communication with the serial
+ EEPROM. You need to dismantle the dash to get at it.</p>
+
+<p><center><strong><a href="DashUPS.html">Dash Uninterruptible Power Supply</a></strong></p>
+
+
+<p>If you're interested in this little device, 
+<a href="mailto:ekowald@mso.anu.edu.au?Subject=Tornado Dash UPS">contact Engenia.</a></p><center>
+
+</BODY>
+</HTML>
