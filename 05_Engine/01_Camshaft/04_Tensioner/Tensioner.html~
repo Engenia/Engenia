@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<html>
+<head>
+  <meta name="generator" content="Bluefish 2.2.10" >
+
+  <title>Cam Chain Tensioner</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080">
+  <center>
+    <strong>Cam Chain Tensioner</strong><br>
+    24 Dec 2018</center>
+<p>To the end of 2006, at least 1 (perhaps 2) 900 Tre engines have had their cam chain break, and 1 has had the
+ chain skip a tooth on a cam drive sprocket. <i>TaxTre - Benelliforum - </i> had one of the former.</p>
+
+<p>There are 4 possible explanations to this:-<br>
+1. The chain was worn beyond servicability.<br>
+2. The tensioner was unable to move the chain guide because the guide had seized.<br>
+3. The tensioner was unable to move the chain guide because it had run out of adjustment.<br>
+4. The tensioner has warped, is touching the inside of the head casting and can no longer move.<br /> 
+<br>#2 is possible in a new engine, because the guide may be a tight fit in it's housing. My new guide was
+ in this catagory. It had to be filed to fit.<br>
+ For an explanation of how #4 might happen, have a look <a href="../06_BustedChain/Appraisal.html#bent_guide" >HERE</a><br>
+ 
+<br>An explanation of how #3 is possible follows :-</p>
+
+<p>I went up to Sydney to catch up with Tax the other week (Nov 2006), and came back with the dimensions of
+ the cam chain tensioner from his broken 900. I've drawn up the unit in both fully compressed (new chain)
+ and fully extended (buggered chain) positions - see below - they're scale drawings. If you look at the
+ measurements for the spring, you'll see that it doesn't quite add up.</p>
+
+  <table>
+    <tr>
+      <td width="33%" valign="top">
+        <center>
+          <p><img src="Tensioner-compressed.jpg" border="2" alt="Tensioner Compressed"><br>Exploded view of the
+ cam chain tensioner - fully compressed.<br>
+
+          <img src="Tensioner-extended.jpg" border="2" alt="Tensioner Extended"><br>Exploded view of the cam
+ chain tensioner - fully extended.
+        </center>
+
+        <p><strong>Taksil's Cam Chain Tensioner Parameters</strong><br>
+        Compressed spring length = 37.1 mm<br>
+        Free spring length = 57.5 mm<br>
+        constant (k) = 3295 N/m<br>
+        40 turns of 0.9 section wire x 4.65 dia<br>
+        Force required to overcome the ratchet = 430gms (4.2N)<br>
+        Spring compression required to produce 4.2N is 1.3mm.</p>
+
+        <p>(O-ring is 19 mm ID x 1.9 mm section.)</p>
+
+        <p><strong>What should the spring length be?</strong></p>
+
+        <table>
+          <tr>
+            <td>Minimum Free Spring Length</td>
+
+            <td>=</td>
+
+            <td>Length to overcome ratchet</td>
+
+            <td>+</td>
+
+            <td>bolt bore depth</td>
+
+            <td>+</td>
+
+            <td>maximum plunger depth</td>
+          </tr>
+
+          <tr>
+            <td></td>
+
+            <td>=</td>
+
+            <td>
+              <center>
+                1.3
+              </center>
+            </td>
+
+            <td>+</td>
+
+            <td>
+              <center>
+                3.3
+              </center>
+            </td>
+
+            <td>+</td>
+
+            <td>
+              <center>
+                57.5
+              </center>
+            </td>
+          </tr>
+
+          <tr>
+            <td><strong>Minimum Free Spring Length</strong></td>
+
+            <td>=</td>
+
+            <td>
+              <center>
+                <strong>62.2 mm</strong>
+              </center>
+            </td>
+          </tr>
+        </table>
+
+        <center>
+          <i>Hmmm, perhaps not.</i>
+        </center>
+
+        <p>If it were 62.2mm, it would be putting an awful lot of pressure on the chain and guide, when they are new, wearing them unduly. In fact, the spring only really needs to be long enough to
+        keep pressure on the chain for 25,000 kms. Or even simpler, until you check it next time. The User Manual says, in the table on the page marked 56 (actually 30 of 48), that the timing chain
+        should be inspected every 5000 km, and replaced every 25,000 km. The "Timing Chain Stretcher" (unfortunate name) should be inspected every 10,000 km.<br>
+        Of course, the manual doesn't tell you how to inspect either the chain or the tensioner. So, let's work it out</p>
+
+        <p>The spring will continue to adjust the chain tension until the plunger depth reaches :-<br></p>
+
+        <table>
+          <tr>
+            <td>Max. Operating Depth</td>
+
+            <td>=</td>
+
+            <td>Spring Length</td>
+
+            <td>-</td>
+
+            <td>Spring length to provide force to overcome ratchet</td>
+
+            <td>-</td>
+
+            <td>bolt bore depth</td>
+          </tr>
+
+          <tr>
+            <td></td>
+
+            <td>=</td>
+
+            <td>Spring Length</td>
+
+            <td>-</td>
+
+            <td>1.3</td>
+
+            <td>-</td>
+
+            <td>3.3</td>
+          </tr>
+
+          <tr>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td><strong>Max. Operating Depth</strong><a name="MaxDepth"></a></td>
+
+            <td>=</td>
+
+            <td><strong>Spring Length</strong></td>
+
+            <td>-</td>
+
+            <td><strong>4.6</strong></td>
+          </tr>
+        </table>
+
+        <p>For what it's worth here's how I reckon you should check the Cam Chain Tensioner.<br>
+        Measure the spring length, then the plunger depth, and apply the following formula</p>
+
+        <center>
+          <strong>Spring Length &gt; Plunger Depth + 4.6</strong>
+        </center>
+
+        <p>If that is TRUE, check it again next service, and repeat every 5000 km.<br>
+        If it is FALSE, stretch the spring until it is long enough to make the relationship TRUE. Alternatively, have Benelli send you one that IS long enough. Better yet, do both. That way you won't
+        be out of action for 6 months.</p>
+
+        <p><strong>To Check The Tensioner Travel</strong><a name="TensionerDepth"></a><br>
+        - locate the tensioner.<br></p>
+
+        <center>
+          <img src="Tensioner.jpg" width="400" height="300" border="2" alt="Tensioner In Situ">
+        </center><br>
+        It's on the right rear of the engine block. On the Tornado, you can see it just below the top right fairing panel and the air duct.<br>
+        - remove the bottom right fairing panel, to allow access to the tensioner central bolt.<br>
+        - remove the central bolt from the tensioner with a 10mm ring spanner.<br>
+        - remove the spring.<br>
+        - measure the depth of the plunger from the body bolt face. Use a length of 1mm copper wire (about 100mm). Carefully feed it into the body until it touches the plunger bore. (Not the edge.)
+        Don't push hard, or the plunger will advance on the ratchet and tighten the chain more than is necessary. That will take about 430 gm, or about 1lb force. Grip the wire with a pair of long
+        nose pliers, flush with the bolt face, and remove the wire. Measure from the pliers to the tip. It should be between 39.7 &amp; 57.5 mm<br>
+        Alternatively, make up a depth gauge.
+        <center>
+          <img src="TensionerDepthGauge.jpg" width="400" height="300" border="2" alt="Tensioner Depth Gauge">
+        </center> (NB. One side of the head is flattened, to allow it to clear the frame.)<br>
+        - measure the free length of the spring.<br>
+
+        <center>
+          <i>A warning from Colin</i>
+        </center>"Just a note if you are doing the tensioner check. My bike is an R S. The spring sticks out a fair bit more than Engenia found, so put some rags around, and support it as you remove
+        the nut, or you may drop it down the back of the engine...<br>
+        when I put it back, I pushed the nut in with one hand, and held it pushed in, and used long nose pliers to start the thread, griping on the wider part next to the flats.."<br>
+        Good point Colin. From what I'm seeing from the responses I'm getting, the springs vary in length, so be prepared for this.
+
+        <p><strong>Mine, at 24,000 km</strong><br>
+        Plunger depth = 48.5 mm<br>
+        Free spring length = 54.5 mm (This is shorter than Taksil's!!!!)<br>
+        Spring Length &gt; Plunger Depth + 4.6 ?<br>
+        54.5 &gt; 48.5 + 4.6 (= 53.1) <strong>TRUE</strong> (1.3 mm left - phew!)</p>
+
+        <p><strong>What's yours?</strong></p>
+
+        <p>How close to the edge is it?</p>
+
+        <p>By the way, reassemble the tensioner in the reverse order. It'll work better if it's put back together.</p>
+
+      </td>
+    </tr>
+  </table>
+<p><strong>What to do If Yours is too Short</strong></p>
+
+<p><a href="ShortSpring.html">Follow this link for a couple of suggestions</a></p>
+
+<p><b><center>As a matter of interest, by all accounts, the 1130's tensioner spring is 75 mm long. Don't know it's spring constant though.</center></b>
+</p>
+</body>
+</html>
