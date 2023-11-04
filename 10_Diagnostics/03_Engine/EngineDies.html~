@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+<TITLE>Engine Dies</TITLE>
+</HEAD>
+<BODY BGCOLOR=FFFFFF TEXT=000000 LINK=0000FF VLINK=800080>
+
+<P><center><STRONG>Engine Dies</STRONG><br>
+18 Dec 07</center></P>
+
+<P>posted by <i>bullbalz - Benelliforum</i> 20 Mch 06<br>
+Every couple of days, it dies when shifting from 2nd to first while slowing for a turn. I have always noticed it
+ and just hit the starter button and kept going. Yesterday, I was getting off the highway and coming to a stoplight.
+ I was braking and listening to music. I shifted from third to second, the engine died and I didn't notice it
+ because of the music. As I let off of the clutch, the rear tire locked and went way squirrely on me. I kept it
+ locked so it didn't pitch me and used the front brake to skid to a stop. It scared the crap out of me.<br>
+
+I'm usually at around 4K RPMs when downshifting and do a pretty good job of matching revs. Sometimes I think it
+ dies when I pull the clutch, even before I shift, but I can't be certain.<br>
+
+Anyone else have this issue? Any ideas? I definitely need some help on this.</p>
+
+<p>posted by <i>JohnnyO - Benelliforum</i> 20 Mch 06<br>
+I've had it happen to me on a few different Tornado's.  It has always been under 3000 rpm with the clutch in; the
+ factory don't know exactly what it is; I have a few idea's. First things I'd do is..... re-download the 6033 map
+ into the ECU, get the idle CO set to 2.0% and open the air stepper (with the Axone tool) to raise the idle to
+ 1,400rpm.</p>
+
+<p>posted by <i>dean100yz - Benelliforum</i> 21 Mch 06<br>
+Mine did it too when I first got it. For some reason its pretty much stopped now. Either ways I was told my mechanic
+ from Red Dog here in Essex/Kent, UK, that it had something to do with the screws in the airbox. He said to cure it
+ you had to turn all 3 screws fully in, then 1.5 to 2 turns out (All the same). Thats meant to cure it. The ECU thing
+ doesnt sound a bad idea either??? Although he never mentioned that, only that it must have the latest 6033 map
+ (assuming yours is a std model). Mine ticks over at around 1200 i think and would stall at around 2-4k. You can't
+ even bump the buggers, 'cos of the slipper clutch lol</p>
+
+<p>posted by <i>JohnnyO - Benelliforum</i> 21 Mch 06<br>
+He's talking about the throttle air by-pass screws, I agree, I set all three at one & half turns out, this helps
+ with off-idle lurch also (giving some progression to a suddenly opening throttle butterfly) but the butterflys
+ have to be synchronized at the same time though.<br>
+
+As a quick test to see if my butterfly synchronization needs doing, I look at the exhaust headers when running
+ at night, they should all glow with the same amount of redness (in neutral), if you have one that glows more red,
+ you'll generally find that the butterfly for that cylinder is open a touch more than the others making that
+ cylinder a little leaner, hence hotter.<br>
+
+I also remove the throttle stop screws for cylinders 1 & 3; cylinders 1 & 3 are linked to number 2, so they are
+ not needed, I don't like the possibility of them confusing any tuning issues.<br>
+
+PS: I adjusted the air by-pass on my RS but it didn't cure the spit-back/cutting out problem... go figure?</p>
+
+<p>posted by <i>vxtbrit - Benelliforum</i> 7 Apr 06<br>
+I agree that the Benelli maps need sorting, but interestingly during my recent modifications to the TNT I noticed
+ that the air sensor was positioned in the corner of the air box just above the cyl head. now I think I’m right in
+ saying these sensors are thermistors which work on temp differential.... the faster the air moves across the
+ sensor the colder it gets, there by giving a variable signal to the ECU this signal as well as the throttle
+ sensor controls fuel management. The problem is when the bike is moving slowly or is stationary the sensor is
+ heated rapidly by the glowing power house (the engine) just below it therefore fooling the management system into
+ immediately modifying the fuel/air mix (incorrectly)......I have repositioned and shielded my sensor to see if
+ this theory is right will let you know the results.</p>
+
+<p>posted by <i>JohnnyO - Benelliforum</i> 10 Apr 06<br>
+Hmmmmm (scratches head), you may be on to something guys, I was having a problem with my TnT race bike in the
+ garage last night, the Axone was showing the air temp (via the bikes airbox sensor) at 50 degrees C when it
+ was only 20 degrees C in the workshop, the bike was hesitating & mis-firing like it was lean.<br>
+If the on-board computer thinks that it is a hot day, it will lean out the mixture BUT funny enough, the CO
+ exhaust analyzer that I had connected did not show it to be lean. I'll keep searching.....</p>
+
+<p>posted by <i>JohnnyO - Benelliforum</i> 10 Apr 06<br>
+Okay vtxbrit, I think you have steered me down the right path, I repositioned the air sensor (well I just hung
+ it out the front of the bike for the purpose of the test), my misfiring stopped, I played around with the Axone
+ and leaned out the mixture and could induce the previous misfire.<br>
+
+As I said earlier, if the air sensor is getting warm (or the air around it), the ECU will lean out the mixture
+ because it thinks it is a hot day, I guess this phenomena would be more extreme on a cold day?<br>
+
+At low rpm, the lean spit-back through an intake port would be enough to stall the engine.<br>
+
+I think I will mount the sensor in the front fairing, the temperature of the air in there would be much more
+ exemplary of the air being inducted.... I think only for Australia though as we rarely get temperatures under
+ 10 C degrees.<br>
+
+I think for the Tornado, you could mount the air sensor in either the airbox or radiator intake ducting but make
+ a sheild so that incoming debris doesn't damage it.<br>
+
+It's still early days yet, I'll do more testing this weekend, I will also send my thoughts to the factory to see
+ what they think.<br>
+
+I think this cutting-out problem that we (Tornado & TnT owners) have all been enduring could be over?..... stay
+ tuned!</p>
+
+<p>posted by <i>vxtbrit - Benelliforum</i> 11 Apr 06<br>
+See my TNT topic first ride since mods, very very happy, it seems all the starting and low end fuelling problems
+ have almost gone I am getting it on the dyno next week then I have one more theory concerning the ignition set
+ up and the way the stock ECU interprets information (or not as the case maybe).</p>
+
+<p>posted by <i>vxtbrit - Benelliforum</i> ?? 2006<br>
+TNT - mods so far<br>
+my brother builds top fuel car engines (seriously clever) and has finally given the tnt a look over after testing
+ inputs/outputs etc. He said the ECU (the brain) is total sh*t and wants throwing in the bin. It cant cope with
+ sudden changes in input signals, which is exactly what an engine does. He reckons to put a 16 channel proper
+ controller in would cost about £600, but then it needs mapping, which could take 2-3 days on a dyno (that’s the
+ expensive bit, bearing in mind his company charge high 3 figure numbers per hour for bench dyno work) I hope that
+ the power commander will be a cheap compromise.<br>
+<a href="http://bigbikeriders.com/photopost/showgallery.php?cat=4304&ppuser=621" target="none">Pictures of the mods</a><br>
+BTW. The link above has been broken for a while, but I'll leave it up just in case a miracle happ[ens and it returns.</p>
+
+<p>posted by <i>vxtbrit - Benelliforum</i> ?? 2006<br>
+TNT "first run with mods"<br>
+The power commander has smoothed out all of the jerking and the "ruff" running at the low end. It’s so much
+ smoother and pulls like a train, without hesitation from 2000 rpm. The devil can is sweet and without the baffle
+ just quiet enough not to drive you crackers. Although the air temp was only about 12 deg the engine never went
+ close to over heating.<br>
+First time I’ve had a long ride without the dreaded cutting out or hot starting problem. I am convinced that with
+ the 16mm new cables and the pcIII those days have gone.</p>
+
+
+</BODY>
+</HTML>
