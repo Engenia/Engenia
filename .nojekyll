@@ -1,1 +1,3 @@
-
+This file exists to speed up the GitHub Actions workflow.
+It will detect the state that the branch does not need a build step, and will execute only the steps necessary to deploy the site to GitHub Pages servers.
+https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
