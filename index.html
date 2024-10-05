@@ -10,8 +10,6 @@
 /* wrap controls the border width of the main menu - you may need to change  this */
 #wrap {
     border:1px solid black;
-/*    width:662px; */
-/*    width:802x; */
 /*    width:1026x;*/
     width:1600x;
     }
@@ -21,8 +19,6 @@
     background:#D6E6FF;
     border-bottom:1px solid white;
     padding:4px 0;
-/*    width:660px; */
-/*    width:800px; */
 /*    width:1024px;*/
     width:1598px;
     }
@@ -100,6 +96,7 @@
     font-family:sans-serif;
     text-decoration:none;
   /* this is a hack for mac/ie5, whom incorrectly cascades the border properties of the parent table to each row */
+ // ToDo: remove IE special
   border:none;
   cursor:pointer;
   cursor:hand;
@@ -152,7 +149,8 @@
  *
  * Customizable multi-level animated DHTML menus with transparency.
  *
- * Copyright 2003-2004, Aaron Boodman (www.youngpup.net)
+ * Copyright 2003-2004, Aaron Boodman (https://github.com/aboodman/transmenus/blob/gh-pages/index.html)
+ * 
  * =================================================================================================
  * "Can I use this?"
  * 
@@ -183,9 +181,7 @@ TransMenu.itemPadding = 3;                             // additional padding aro
 TransMenu.shadowSize = 2;                              // size of shadow under menu
 TransMenu.shadowOffset = 3;                            // distance shadow should be offset from leading edge
 TransMenu.shadowColor = "#888";                        // color of shadow (transparency is set in CSS)
-//TransMenu.shadowPng = "img/grey-40.png";               // a PNG graphic to serve as the shadow for mac IE5
 TransMenu.backgroundColor = "white";                   // color of the background (transparency set in CSS)
-//TransMenu.backgroundPng = "img/white-90.png";          // a PNG graphic to server as the background for mac IE5
 TransMenu.hideDelay = 800;                            // number of milliseconds to wait before hiding a menu
 TransMenu.slideTime = 400;                             // number of milliseconds it takes to open and close a menu
 
@@ -206,12 +202,13 @@ TransMenu._maxZ = 100;
 // supporting win ie5+, mac ie5.1+ and gecko >= mozilla 1.0
 TransMenu.isSupported = function() {
         var ua = navigator.userAgent.toLowerCase();
-    var pf = navigator.platform.toLowerCase();
+        var pf = navigator.platform.toLowerCase();
         var an = navigator.appName;
         var r = false;
 
         if (ua.indexOf("gecko") > -1 && navigator.productSub >= 20020605) r = true; // gecko >= moz 1.0
         else if (an == "Microsoft Internet Explorer") {
+                // ToDo: remove remove IE special
                 if (document.getElementById) { // ie5.1+ mac,win
                         if (pf.indexOf("mac") == 0) {
               r = /msie (\d(.\d*)?)/.test(ua) && Number(RegExp.$1) >= 5.1;
@@ -266,7 +263,7 @@ function TransMenu(oActuator, iDirection, iLeft, iTop, iReferencePoint, parentMe
         this.ondeactivate = new Function();     // when the menu finishes sliding closed
         this.onmouseover = new Function();      // when the menu has been moused over
         this.onqueue = new Function();          // hack .. when the menu sets a timer to be closed a little while in the future
-    this.ondequeue = new Function();
+        this.ondequeue = new Function();
 
         // initialization
         this.index = TransMenu.registry.length;
@@ -305,7 +302,7 @@ function TransMenu(oActuator, iDirection, iLeft, iTop, iReferencePoint, parentMe
                 m.onmouseover = child_mouseover;
                 m.ondeactivate = child_deactivate;
                 m.onqueue = child_queue;
-        m.ondequeue = child_dequeue;
+                m.ondequeue = child_dequeue;
 
                 return m;
         }
@@ -726,7 +723,7 @@ function TransMenuSet(iDirection, iLeft, iTop, iReferencePoint) {
           current.hide();
           current = null;
         }
-        }
+     }
 }
 
 //==================================================================================================
@@ -785,11 +782,11 @@ function Accelimation(from, to, time, zip) {
 
         this.x0         = from;
         this.x1    = to;
-  this.dt    = time;
-  this.zip  = -zip;
-  this.unit  = unit;
-  this.timer  = null;
-  this.onend  = new Function();
+        this.dt    = time;
+        this.zip  = -zip;
+        this.unit  = unit;
+        this.timer  = null;
+        this.onend  = new Function();
         this.onframe    = new Function();
 }
 
@@ -985,13 +982,6 @@ if (window.attachEvent) {
         menu12.onactivate = function() { document.getElementById("tr650").className = "hover"; };
         menu12.ondeactivate = function() { document.getElementById("tr650").className = ""; };
 
-// use following if no sub-menu
-//        document.getElementById("xxxx").onmouseover = function() {
-//          ms.hideCurrent();
-//          this.className = "hover";
-//        }
-
-//        document.getElementById("xxxx").onmouseout = function() { this.className = ""; }
       }
     }
   </script>
@@ -1281,7 +1271,9 @@ if (window.attachEvent) {
 
     //==================================================================================================
     var menu10 = ms.addMenu(document.getElementById("diagnostics"));
-    menu10.addItem("Electrical", "./10_Diagnostics/01_Electrical/WiringError.html");
+    menu10.addItem("Electrical Safety System Tornado", "./09_Electrical/10_SafetySystem/TornadoSafetySystem.jpg");
+    menu10.addItem("Electrical Safety System Tornado RS", "./09_Electrical/10_SafetySystem/Tornado%20RS%20Safety%20System.jpg");
+    menu10.addItem("Electrical Wiring Diagram Error in Workshop Manual", "./10_Diagnostics/01_Electrical/WiringError.html");
     menu10.addItem("Frame Knock", "./10_Diagnostics/02_Frame/FrontEndKnock.html");
     menu10.addItem("Engine Dies", "./10_Diagnostics/03_Engine/EngineDies.html");
     menu10.addItem("Hot Start Fault", "./10_Diagnostics/03_Engine/HotStart.html");
@@ -1369,6 +1361,7 @@ Engenia's Tornado 900 Tre</font></font></font> <img src="austflag.gif" alt="Auss
 // This notice must stay intact for use
 
 //Enter domain of site to search.
+// ToDo: set dynamically to avoid looking at wrong website! 
 var domainroot="www.engenia.com.au"
 
 function Gsitesearch(curobj){curobj.q.value="site:"+domainroot+" "+curobj.qfront.value}
@@ -1380,11 +1373,11 @@ function Gsitesearch(curobj){curobj.q.value="site:"+domainroot+" "+curobj.qfront
 <p>
 <input name="q" type="hidden" />
 <input name="qfront" type="text" style="width: 200px" />
-<input type="submit" value="Search Engenia (with Google)" />
+<input type="submit" value="Search website" />
 </p>
 </form>
 
-<p><font size="-2"><center> Updated 27 Jan 2024 (Tank)</center></font>
+<p><font size="-2"><center> Updated 03 Oct 2024 (Electrical Safety System Tornado)</center></font>
 </p>
 
 </body>
