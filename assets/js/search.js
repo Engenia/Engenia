@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let resultsContainer;
     const maxResults = 10;
 
-    fetch(`search_index.json`)
+    fetch(`${baseUrl}/search_index.json`)
         .then(response => response.json())
         .then(searchIndex => {
             // Function to calculate TF-IDF score
