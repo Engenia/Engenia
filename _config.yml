@@ -2,7 +2,7 @@
 lsi: false
 safe: true
 # source: ''
-baseurl: ""
+baseurl: "/Engenia"
 incremental: false
 highlighter: rouge
 gist:
