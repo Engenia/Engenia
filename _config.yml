@@ -1,12 +1,24 @@
 # Jeykill settings   see https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#configuring-jekyll-in-your-github-pages-site
-lsi: false
-safe: true
-# source: ''
+# use only settings mentioned in https://github.com/markusos/markusos.github.io/blob/master/_config.yml
+
 baseurl: "/Engenia"
-incremental: false
-highlighter: rouge
-gist:
-  noscript: false
+
+# Build settings  
 kramdown:
-  math_engine: mathjax
   syntax_highlighter: rouge
+plugins: 
+  - jekyll-paginate
+  - jekyll-sitemap
+
+collections:
+  post_tags:
+    permalink: /tags/:name/
+    output: true
+
+defaults:
+  - scope:
+      path: ''
+      type: post_tags
+    values:
+      permalink: "/tags/:name/"
+      layout: tag
