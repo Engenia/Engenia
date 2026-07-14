@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let resultsContainer;
     const maxResults = 10;
 
-    fetch(`search_index.json`)
+    fetch(`${baseUrl}/search_index.json`)
         .then(response => response.json())
         .then(searchIndex => {
             // Function to calculate TF-IDF score
@@ -25,6 +25,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
 
                 return score;
+            }
+
+            // Function to decode HTML entities
+            function decodeHtml(html) {
+                return new DOMParser().parseFromString(html, 'text/html').documentElement.textContent;
             }
 
             // Function to perform the search
@@ -57,13 +62,37 @@ document.addEventListener("DOMContentLoaded", function() {
                 const ul = document.createElement('ul');
                 results.forEach(item => {
                     const li = document.createElement('li');
+
+                    // Post metadata
+                    const span = document.createElement('span');
+                    span.className = 'post-meta';
+                    span.textContent = item.date;
+
+                    if (item.tags && item.tags.length > 0) {
+                        span.textContent += ' • ';
+                        const tagsSpan = document.createElement('span');
+                        tagsSpan.className = 'tags';
+                        item.tags.forEach(tag => {
+                            const tagLink = document.createElement('a');
+                            tagLink.href = `${baseUrl}/tags/${tag.toLowerCase()}/`;
+                            tagLink.textContent = '# ' + tag.toLowerCase();
+                            tagsSpan.appendChild(tagLink);
+                        });
+                        span.appendChild(tagsSpan);
+                    }
+
+                    li.appendChild(span);
+
+                    // Post title
                     const a = document.createElement('a');
+                    a.className = 'post-link';
                     a.href = item.url;
-                    a.textContent = item.title;
+                    a.textContent = decodeHtml(item.title);
                     li.appendChild(a);
 
+                    // Post excerpt
                     const p = document.createElement('p');
-                    p.textContent = item.excerpt;
+                    p.textContent = decodeHtml(item.excerpt);
                     li.appendChild(p);
 
                     ul.appendChild(li);
